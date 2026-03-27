@@ -218,7 +218,7 @@ body {
     padding: 10px 7px;
     padding-bottom: 50px;
     min-height: 80vh;
-    /* background-attachment: scroll; */
+    background-attachment: scroll;
   }
 
   .hero-content h1 {
