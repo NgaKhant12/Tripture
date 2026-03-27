@@ -137,6 +137,7 @@ body {
   display: flex;
   align-items: center;
   padding-top: 5px; /* Navbar space */
+  padding-bottom: 50px;
 }
 
 /* Gradient Text Effect */
@@ -214,13 +215,14 @@ body {
 
 @media (max-width: 767px) {
   .home {
-    padding: 30px 7px;
+    padding: 10px 7px;
+    padding-bottom: 50px;
     min-height: 80vh;
     /* background-attachment: scroll; */
   }
 
   .hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 
   .hero-content p {
