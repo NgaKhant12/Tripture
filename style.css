@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    --bg-azure-color:#a4c9d5;
+    --nav-mist-color:#c2e2e8;
+    --ocean-color:#30665c;
+    --card-color:#799dc1;
+
+    --body-font:'Gelasio';
+    --nav-font:'Saira';
+    --head-fontsize:30px;
+    --body-fontsize:15px;
+    --card-title-fontsize:38px;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-image: url(./assets/bg2.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* start nav bar  */
+
+/* .logo{
+    
+} */
+
+nav{
+    /* background-color: var(--nav-mist-color); */
+    background: linear-gradient(#001211,rgba(0,0,0,0));
+    padding:15px 25px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top:0;  /* to fix at top with sticky*/
+
+    z-index: 100;
+
+    height:50px;
+
+}
+
+nav .navmenu{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #30665c; */
+    width:50%;
+    height: 45px;
+    font-size: 20px;
+    
+    border-bottom:2px solid #a4c9d5;
+
+    z-index: 100;
+
+}
+
+nav .navmenu a{
+    text-decoration: none;
+    color:var(--nav-mist-color);
+    font-family: var(--nav-font);
+    
+}
+
+
+.nav-links-right button{
+    margin:0 10px;
+    padding:8px 30px;
+
+    border-radius: 50px;
+    border:1px solid var(--bg-azure-color) ;
+    background-color: transparent;
+
+    font-family: var(--nav-font);
+    font-size:17px;
+
+    color:#c2e2e8;
+    
+}
+
+.nav-links-right #booking{
+    background-color: var(--bg-azure-color);
+    color:#001211;
+
+}
+
+/* end nav bar  */
+
+
+
+/* Start Hero section  */
+.hero{
+    height:500px;
+}
+/* End Hero section  */
