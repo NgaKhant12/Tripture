@@ -28,17 +28,17 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Tours</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-3">
-                    <a href="#signup" class="btn btn-login">Sign Up</a>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
+                    <a href="#signup" class="btn btn-login"><i class="fa-solid fa-user-plus me-1"></i> Sign Up</a>
                     <a href="#book" class="btn btn-book">
-                        Book Now <i class="fa-solid fa-arrow-right ms-1"></i>
+                        <i class="fa-solid fa-plane-departure me-1"></i> Book Now </i>
                     </a>
                 </div>
             </div>
@@ -58,37 +58,39 @@
                             discover hidden gems, and create memories that will last a lifetime.
                         </p>
 
-                        <div class="search-box-container shadow-lg">
+                        <div class="search-box-container shadow-lg border border-primary">
                             <div class="row g-2 align-items-center">
-                                <div class="col-md-3 border-end-md">
+                                <div class="col-md-3">
                                     <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-0 text-primary">
+                                        <span
+                                            class="input-group-text bg-transparent border-0 px-2 text-primary me-1 ms-1">
                                             <i class="fa-solid fa-location-dot"></i>
                                         </span>
-                                        <input type="text" class="form-control border-0 shadow-none rounded-3"
+                                        <input type="text" class="form-control border-0 shadow-none rounded-5"
                                             placeholder="Where are you going?">
                                     </div>
                                 </div>
-                                <div class="col-md-3 border-end-md">
+                                <div class="col-md-3">
                                     <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-0 text-primary">
+                                        <span class="input-group-text bg-transparent border-0 px-2 text-primary ms-1">
                                             <i class="fa-solid fa-calendar-days"></i>
                                         </span>
-                                        <input type="text" class="form-control border-0 shadow-none rounded-3"
+                                        <input type="text" class="form-control border-0 shadow-none rounded-5"
                                             placeholder="When?">
                                     </div>
                                 </div>
-                                <div class="col-md-3 border-end-md">
+                                <div class="col-md-3 ">
                                     <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-0 text-primary">
-                                            <i class="fa-solid fa-user-group"></i>
+                                        <span
+                                            class="input-group-text bg-transparent px-1 text-primary border-0 ms-1 me-0 ">
+                                            <i class="fa-solid fa-user-group "></i>
                                         </span>
-                                        <input type="text" class="form-control border-0 shadow-none rounded-3"
+                                        <input type="text" class="form-control border-0 shadow-none rounded-5"
                                             placeholder="Travelers">
                                     </div>
                                 </div>
-                                <div class="col-md-3 p-2">
-                                    <button class="btn btn-primary w-100 py-3 rounded-4 fw-bold"> <i
+                                <div class="col-md-3 p-1 p-md-2">
+                                    <button class="btn btn-primary rounded-5 fw-bold btn-search"> <i
                                             class="fa-solid fa-search me-2"></i> Search</button>
                                 </div>
                             </div>

@@ -52,7 +52,7 @@ body {
 
 .nav-link:hover::after,
 .nav-link.active::after {
-  width: 80%;
+  width: 90%;
 }
 
 .nav-link:hover {
@@ -92,9 +92,40 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Home Section */
+@media (max-width: 991px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
 
-/* Home Section Core */
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 5px;
+    font-size: 0.9rem;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 80px;
+  }
+}
+
+/* Home Section */
 .home {
   min-height: 90vh;
   background:
@@ -129,25 +160,32 @@ body {
 .search-box-container {
   background: #f4f4f4;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   margin-top: 30px;
+  margin-inline:0;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* For larger screens: border separators */
-@media (min-width: 768px) {
-  .border-end-md {
-    border-right: 1px solid #eee;
-  }
-}
+/* .search-box-container .input-group {
+  background: #fff;
+  border-radius: 50px;
+} */
 
 .search-box-container .form-control {
   padding: 15px 10px;
+  padding-left: 20px;
   font-size: 0.9rem;
 }
 
 .search-box-container .input-group-text {
   font-size: 1.1rem;
 }
+
+.search-box-container .btn-search {
+    width:95%;
+    padding: 15px 0;
+    font-size: 1rem;
+  }
 
 /* Animation on load */
 .hero-content {
@@ -162,5 +200,40 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    padding: 40px 10px;
+    min-height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .search-box-container {
+    margin-top: 20px;
+    margin-inline: 8px;
+  }
+  .search-box-container .form-control {
+    padding: 13px 10px;
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  .search-box-container .input-group-text {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn-search {
+    width:85%;
+    padding: 12px 0;
+    font-size: 0.9rem;
   }
 }
