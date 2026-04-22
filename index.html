@@ -32,7 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Destinations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Domestic</a></li>
+                            <li><a class="dropdown-item" href="#">International</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#">Tours</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
@@ -48,6 +57,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="home" id="home">
         <div class="container">
             <div class="row">
@@ -109,7 +119,158 @@
         </div>
     </section>
 
+    <!-- Destinations -->
+    <section class="destinations py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h6 class="text-primary fw-bold text-uppercase tracking-wider">Top Picks</h6>
+                    <h2 class="fw-bold display-5">Popular Destinations</h2>
+                    <div class="heading-line mx-auto"></div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="destination-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&h=400&auto=format&fit=crop"
+                                alt="Paris">
+                            <div class="price-tag">$499</div>
+                        </div>
+                        <div class="card-content">
+                            <h5>Paris, France</h5>
+                            <p>Experience the romance and culture of the City of Lights with our expert guides.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-muted"><i class="far fa-clock me-1"></i> 5 Days</span>
+                                <a href="#" class="explore-link">Explore Now <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="destination-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=600&h=400&auto=format&fit=crop"
+                                alt="Bali">
+                            <div class="price-tag">$350</div>
+                        </div>
+                        <div class="card-content">
+                            <h5>Bali, Indonesia</h5>
+                            <p>Discover the tropical paradise with stunning beaches and local culture.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-muted"><i class="far fa-clock me-1"></i> 7 Days</span>
+                                <a href="#" class="explore-link">Explore Now <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="destination-card">
+                        <div class="img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=600&h=400&auto=format&fit=crop"
+                                alt="Tokyo">
+                            <div class="price-tag">$620</div>
+                        </div>
+                        <div class="card-content">
+                            <h5>Tokyo, Japan</h5>
+                            <p>Embark on a cultural journey in the heart of Japan's bustling metropolis.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-muted"><i class="far fa-clock me-1"></i> 4 Days</span>
+                                <a href="#" class="explore-link">Explore Now <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="destinations py-5" id="destinations">
+        <div class="container mb-5 text-center">
+            <h2 class="fw-bold display-5">Popular Destinations</h2>
+            <p class="text-muted">Explore our most-loved places around the world with a touch of luxury.</p>
+        </div>
+
+        <div class="scroll-wrapper">
+            <div class="group">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Paris" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris, France</h5>
+                        <p class="card-text">Experience the romance and culture of the City of Lights.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Venice" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Venice, Italy</h5>
+                        <p class="card-text">Navigate the beautiful canals and historical architecture.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Kyoto" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyoto, Japan</h5>
+                        <p class="card-text">Discover the serenity of ancient temples and traditions.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Bali" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Bali, Indonesia</h5>
+                        <p class="card-text">Relax in the tropical paradise and vibrant green landscapes.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Paris" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris, France</h5>
+                        <p class="card-text">Experience the romance and culture of the City of Lights.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Venice" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Venice, Italy</h5>
+                        <p class="card-text">Navigate the beautiful canals and historical architecture.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Kyoto" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyoto, Japan</h5>
+                        <p class="card-text">Discover the serenity of ancient temples and traditions.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=600&h=400&auto=format&fit=crop"
+                        alt="Bali" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Bali, Indonesia</h5>
+                        <p class="card-text">Relax in the tropical paradise and vibrant green landscapes.</p>
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {

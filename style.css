@@ -29,7 +29,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Navigation Links */
 .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
   font-weight: 400;
@@ -38,7 +37,7 @@ body {
   transition: 0.3s;
 }
 
-.nav-link::after {
+.nav-link:not(.dropdown-toggle)::after {
   content: "";
   position: absolute;
   width: 0;
@@ -50,13 +49,40 @@ body {
   transform: translateX(-50%);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:not(.dropdown-toggle):hover::after,
+.nav-link:not(.dropdown-toggle).active::after {
   width: 90%;
 }
 
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.5em; /* Arrow နဲ့ စာသားကြား ခြားလိုက်တာ */
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.nav-link.dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%; /* margin နဲ့ ညှိထားတာ */
+  background-color: white;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.nav-link.dropdown-toggle:hover::before {
+  width: 70%; /* arrow ပါတာကြောင့် width ကို နည်းနည်းလျှော့ထားတာ ပိုလှတယ် */
+}
+
 .nav-link:hover {
-  color: var(--white) !important;
+  color: #ffffff !important;
 }
 
 /* Modern Buttons */
@@ -101,6 +127,62 @@ body {
 
   .nav-link {
     color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .nav-link:not(.dropdown-toggle)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:not(.dropdown-toggle):hover::after,
+  .nav-link:not(.dropdown-toggle).active::after {
+    width: 80px;
+  }
+
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5em; /* Arrow နဲ့ စာသားကြား ခြားလိုက်တာ */
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+
+  .nav-link.dropdown-toggle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%; /* margin နဲ့ ညှိထားတာ */
+    background-color: white;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+  }
+
+  .nav-link.dropdown-toggle:hover::before {
+    width: 70%; /* arrow ပါတာကြောင့် width ကို နည်းနည်းလျှော့ထားတာ ပိုလှတယ် */
+  }
+
+  .nav-link:hover {
+    color: #ffffff !important;
+  }
+  /* 
+  .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
     margin: 0 5px;
     font-size: 0.9rem;
     position: relative;
@@ -122,7 +204,7 @@ body {
   .nav-link:hover::after,
   .nav-link.active::after {
     width: 80px;
-  }
+  } */
 }
 
 /* Home Section */
@@ -295,4 +377,196 @@ body {
 .flatpickr-prev-month:hover svg,
 .flatpickr-next-month:hover svg {
   fill: #0ea5e9 !important;
+}
+
+/* Destinations Section */
+:root {
+  --primary-color: #007bff;
+  --text-dark: #2d3436;
+}
+
+.destinations {
+  background-color: #f8f9fa;
+}
+
+.heading-line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* Card Design */
+.destination-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper & Zoom */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.destination-card:hover .img-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Price Tag */
+.price-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: var(--primary-color);
+  backdrop-filter: blur(5px);
+}
+
+/* Content Area */
+.card-content {
+  padding: 25px;
+}
+
+.card-content h5 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  color: #636e72;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Explore Link */
+.explore-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.explore-link:hover {
+  letter-spacing: 0.5px;
+  color: #0056b3;
+}
+
+/*Destinations Section*/
+
+.destinations {
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.scroll-wrapper {
+  margin: 50px 0;
+  display: flex;
+  width: 100%;
+  overflow: hidden; /* Scrollbar ကို ဖျောက် */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* ဘေးနှစ်ဖက်ကို Fade out လုပ်တဲ့ modern trick */
+}
+
+.group {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+/* Hover လုပ်ရင် Animation ကို ရပ်ဖို့ */
+.scroll-wrapper:hover .group {
+  animation-play-state: paused;
+}
+
+.scroll-wrapper .card {
+  min-width: 400px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Effect */
+.scroll-wrapper .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+  background: white;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-weight: 600;
+  background: #0984e3;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #00cec9;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
