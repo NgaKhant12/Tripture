@@ -134,6 +134,11 @@ body {
   }
 }
 
+.highlight i {
+  color: #ffd700;
+  font-weight: 600; /* Semi-bold */
+}
+
 /* Calendar Container */
 .flatpickr-calendar {
   background: #ffffff;
