@@ -1,0 +1,95 @@
+
+.destinations {
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.scroll-wrapper {
+  margin: 50px 0;
+  display: flex;
+  width: 100%;
+  overflow: hidden; /* Scrollbar ကို ဖျောက် */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* ဘေးနှစ်ဖက်ကို Fade out လုပ်တဲ့ modern trick */
+}
+
+.group {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+/* Hover လုပ်ရင် Animation ကို ရပ်ဖို့ */
+.scroll-wrapper:hover .group {
+  animation-play-state: paused;
+}
+
+.scroll-wrapper .card {
+  min-width: 350px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Effect */
+.scroll-wrapper .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+  background: white;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-weight: 600;
+  background: #0984e3;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #00cec9;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
