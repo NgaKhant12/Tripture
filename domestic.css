@@ -1,0 +1,159 @@
+:root {
+  --primary-teal: #086d71;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  /* linear-gradient ကို သုံးပြီး အဖြူရောင်မှ ပုံကြည်ကြည်လေးဖြစ်အောင် ဖန်တီးထားပါတယ် */
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      /* ဘယ်ဘက်အစမှာ အဖြူစစ်စစ် */ rgba(255, 255, 255, 0.9) 30%,
+      /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ rgba(255, 255, 255, 0) 70%
+        /* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
+    ),
+    url("/assets/bagan-bg.jpg"); /* စိမ်းစိမ်းစိုစို တောင်တန်းပုံ */
+
+  background-size: cover;
+  background-position: center right; /* ပုံကို ညာဘက်ခြမ်းကို အဓိက ကပ်ထားမယ် */
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.text-teal {
+  color: var(--primary-teal) !important;
+}
+
+.btn-teal {
+  background-color: var(--primary-teal);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-teal:hover {
+  background-color: #06565a;
+  color: white;
+}
+
+.btn-teal.active {
+  background-color: var(--primary-teal);
+}
+
+/* Package Section Positioning */
+.packages-section {
+  margin-top: -100px;
+  /* Hero ပေါ်ကို ကတ်တွေ တင်ဖို့ */
+  position: relative;
+  z-index: 10;
+}
+
+/* Card Improvements */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 0 70px 7px;
+    background: url("/assets/bagan-bg.jpg");
+
+    background-size: cover;
+    background-position: center right;
+    height: 80vh;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content h1{
+    font-size: 1.8rem;
+  }
+  .hero-content h6{
+    font-size: 0.8rem;
+  }
+  .hero-content .quick-search-btns{
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .packages-section {
+    margin-top: -50px;
+  }
+}
+
+/* Color Palette */
+.bg-teal {
+    background-color: #086d71 !important;
+}
+
+.bg-dark-blue {
+    background-color: #051922 !important;
+}
+
+/* Accordion Styling */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--primary-teal);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Newsletter Customization */
+.newsletter-box input {
+    height: 50px;
+    border-radius: 8px 0 0 8px;
+}
+.newsletter-box button {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Footer Links */
+footer ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer ul li:hover {
+    color: var(--primary-teal);
+    transform: translateX(5px);
+}
+
+.map-bg {
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .border-md-none {
+        border: none !important;
+    }
+}
