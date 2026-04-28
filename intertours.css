@@ -16,6 +16,8 @@
 * {
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 }
 
 body {
@@ -23,56 +25,55 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* hero section  */
+.hero-section {
+  /* linear-gradient ကို သုံးပြီး အဖြူရောင်မှ ပုံကြည်ကြည်လေးဖြစ်အောင် ဖန်တီးထားပါတယ် */
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%, /* ဘယ်ဘက်အစမှာ အဖြူစစ်စစ် */ 
+      rgba(255, 255, 255, 0.9) 30%, /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ 
+      rgba(255, 255, 255, 0) 70%/* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
+    ),
+    url("https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg"); /* ပင်လယ်ပုံ */
 
-/* Hero */
-.hero {
-  background: url("https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  color: white;
-  position: relative;
+	background-size: cover;
+	background-position: center right; /* ပုံကို ညာဘက်ခြမ်းကို အဓိက ကပ်ထားမယ် */
+	height: 80vh;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to  right,
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.85),
-    transparent 60%
-  );
-  z-index: 1;
-}
-.hero h1 {
-  position: absolute;
-  top: 30%;
-  left: 8%;
-  font-weight: bold;
-  font-size: 40px;
-  z-index: 5;
+.hero-section .text-teal {
   font-family: "Gelasio";
   color: var(--text);
 }
 
-.hero h2 {
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  z-index: 6;
+.hero-section h1 {
   font-family: "Damion";
   color: var(--primary);
+}
 
-  font-weight: 400;
-  
-  font-size: 35px;
-  width:500px;
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 0 70px 7px;
+
+    background-size: cover;
+    background-position: center right;
+    height: 80vh;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content h1{
+    font-size: 1.8rem;
+  }
+  .hero-content h6{
+    font-size: 0.8rem;
+  }
 
 }
 
@@ -105,12 +106,28 @@ body {
     background: radial-gradient(circle,transparent,transparent);
     border-radius: 10px;
     font-size: 20px;
+	  max-width: 100%;
 }
 
 .tab-btn.active {
     background: radial-gradient(circle,transparent,rgba(47, 181, 132, 0.554));
 
     color: rgb(22, 20, 20);
+}
+
+@media (max-width:768px) {
+	.tab-btn {
+		padding:8px 15px;
+		margin:0 10px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width:600px) {
+	.tab-btn {
+		padding:8px 15px;
+		font-size: 10px;
+	}
 }
 
 /* Card */
@@ -121,10 +138,13 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: 0.3s;
   margin-bottom: 20px;
+  /* border:  */
 }
 
 .travel-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(40, 92, 164, 0.544);
+
 }
 
 .img-box {
@@ -135,6 +155,24 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+.description-box{
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tour-list{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.tour-list li {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color:#555;
 }
 
 .badge-top {
@@ -152,38 +190,22 @@ body {
   font-weight: bold;
 }
 
-.btn{
-    background-color: var(--primary);
+.btn-teal {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  transition: 0.3s;
 }
 
-
-/* FEATURES */
-.feature-box {
-  background: radial-gradient(
-    rgba(208, 219, 219, 0.274) 55%,
-    rgba(55, 168, 205, 0.525)
-  );
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  min-height: 170px;
-}
-.feature-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-.icon {
-  font-size: 32px;
+.btn-teal:hover {
+  background-color: #06565a;
+  color: white;
 }
 
-.feature-box h6 {
-  font-size: clamp(17px, 1vw, 25px);
-  font-weight: 500;
+.btn-teal.active {
+  background-color: var(--secondary);
 }
-.feature-box p {
-  font-size: clamp(15px, 0.7vw, 18px);
-}
+
 
 /* ANIMATION */
 /* .fade-in {
@@ -197,6 +219,42 @@ body {
     transform: translateY(0);
   }
 } */
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Accordion Styling */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--primary-teal);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+
+/* Newsletter Customization */
+.newsletter-box input {
+    height: 50px;
+    border-radius: 8px 0 0 8px;
+}
+.newsletter-box button {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Color Palette */
+.bg-teal {
+    background-color: #086d71 !important;
+}
+
+.bg-dark-blue {
+    background-color: #051922 !important;
+}
+
 
 /*contact us*/
 /* --- New Modern Footer CSS --- */
