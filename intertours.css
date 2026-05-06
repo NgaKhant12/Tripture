@@ -11,6 +11,8 @@
   --bg: #ece7dc;
   --text: #111827;
   --subtext: #6b7280;
+  --primary-teal: #086d71;
+  --light-bg: #f8f9fa;
 }
 
 * {
@@ -247,6 +249,10 @@ body {
 }
 
 /* Color Palette */
+.text-teal {
+  color: var(--primary-teal) !important;
+}
+
 .bg-teal {
     background-color: #086d71 !important;
 }
@@ -256,129 +262,32 @@ body {
 }
 
 
-/*contact us*/
-/* --- New Modern Footer CSS --- */
-.footer-section {
-  background: #1a202c; /* Dark elegant background */
-  color: #e2e8f0;
-  padding: 80px 0 30px 0;
-  font-family: "Poppins", sans-serif;
+
+/* Footer Links */
+footer ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer ul li:hover {
+    color: var(--primary-teal);
+    transform: translateX(5px);
 }
 
-.footer-logo {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.footer-info p {
-  color: #94a3b8;
-  line-height: 1.7;
-}
-
-.footer-heading {
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 25px;
-  position: relative;
-}
-
-.footer-heading::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 40px;
-  height: 2px;
-  background: var(--primary);
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 12px;
-}
-
-.footer-links li a {
-  color: #94a3b8;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.footer-links li a:hover {
-  color: var(--primary);
-  padding-left: 8px;
-}
-
-/* Contact Items Layout */
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.icon-box {
-  width: 45px;
-  height: 45px;
-  background: rgba(14, 165, 233, 0.1);
+.payment-icon img{
+  height:30px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  color: var(--primary);
-  font-size: 1.2rem;
 }
 
-.text-box span {
-  display: block;
-  font-size: 0.8rem;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.map-bg {
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
 }
 
-.text-box p,
-.text-box a {
-  margin: 0;
-  font-weight: 500;
-  color: #f1f5f9;
-  text-decoration: none;
-}
-
-/* Social Media Icons */
-.social-links a {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  border-radius: 50%;
-  margin-right: 10px;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  background: var(--primary);
-  transform: translateY(-5px);
-}
-
-.footer-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 40px 0 20px 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #64748b;
+@media (max-width: 768px) {
+    .border-md-none {
+        border: none !important;
+    }
 }
 
 /* Smooth Scrolling */
