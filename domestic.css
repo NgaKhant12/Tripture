@@ -146,6 +146,11 @@ footer ul li:hover {
     transform: translateX(5px);
 }
 
+.payment-icon img{
+  height:30px;
+  border-radius: 10px;
+}
+
 .map-bg {
     background: #f8f9fa;
     position: relative;
