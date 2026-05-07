@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Tripture</title>
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- custom css  -->
+    <link href="./signup.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="signup-container" id="signup">
+        <div class="form-section">
+            <div class="form-wrapper">
+                <h2>Create your account</h2>
+                
+                <button class="google-btn">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google Logo" style="width: 20px; height: 20px;">
+                    Continue with Google
+                </button>
+
+                <div class="divider">or</div>
+
+                <form id="signupForm">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@email.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password"  placeholder="*****" required>
+                        <i class="fa-solid fa-eye" id="togglePassword"></i> <!-- for eye -->
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Remember my account.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Create account</button>
+                </form>
+
+                <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="testimonial">
+                <span class="quote-mark">“</span>
+                <p>Unlock the magic of travel with confidence. Our team works tirelessly to curate safe, exciting, and authentic local experiences for every traveler.</p>
+                <div class="author">
+                    <strong>Tripture Team</strong><br>
+                    <span>Peaceful Travel with Us</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+        const form = document.getElementById('signupForm');
+
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                // 1. Stop the page from refreshing
+                e.preventDefault(); 
+
+                // 2. Get the values from the inputs
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const terms = document.getElementById('terms').checked;
+
+                // 3. Simple logic to check if fields are filled
+                if (email && password) {
+                    console.log("Form Submitted!");
+                    // alert("Welcome to Tripture! Account created for: " + email);
+                    
+                    // Optional: Redirect to home page after success
+                    window.location.href = "index.html";
+                } else {
+                    alert("Please fill in all fields.");
+                }
+            });
+        } else {
+            console.error("Could not find the signupForm ID. Check your HTML!");
+        }
+    });
+    </script>
+
+    <!-- for eye transtion  -->
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const passwordField = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            //1. Type ကို password နဲ့ text အပြန်အလှန် ပြောင်းခြင်း
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            //2. Icon ကို fa-eye ကနေ fa-eye-slash ကို အပြန်အလှန် ပြောင်းခြင်း
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+     </script>
+</body>
+</html>
