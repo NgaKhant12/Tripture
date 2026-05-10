@@ -584,7 +584,7 @@ body {
 }
 
 .features-title span {
-    color: var(--tripture-teal);
+    color: var(--secondary);
 }
 
 /* Minimalist Feature Card (No border, focus on icon & text space) */
