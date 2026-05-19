@@ -1,207 +1,267 @@
 :root {
   --primary: #0b7285;
   --primary-dark: #12212e;
-  --secondary:#6edbd6;
+  --secondary: #6edbd6;
   --white: #e8fffa;
-  --cream:#ece7dc;
-  --glass: rgba(255, 255, 255, 0.15);
+  --cream: #ece7dc;
+  --glass: rgba(11, 114, 133, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: "Gelasio", sans-serif;
-  background-color: #f8fafc; /* Light grey background makes the white nav pop */
+  background-color: #f8fafc;
 }
 
-/* Navbar Container */
+/*    MAIN NAVBAR (GLASSMORPHISM)*/
 .glass-nav {
-  background: rgba(18, 144, 203, 0.85); /* Slightly translucent blue */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 12px 0;
-  transition: all 0.3s ease;
+  background: rgba(18, 33, 46, 0.75) !important; /* Dark Premium Glass Base */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Brand styling */
-
-
+/* Brand Styles */
 .navbar-brand {
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--white) !important;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff !important;
   letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+.brand-icon {
+  color: var(--secondary);
 }
 
+/* Nav Links & Underline Micro-interaction */
 .nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
   font-size: 1rem;
-  margin: 0 10px;
+  padding: 8px 16px !important;
   position: relative;
-  transition: 0.3s;
+  transition: color 0.3s ease;
+  margin: 0 7px;
 }
 
-.nav-link:not(.dropdown-toggle)::after {
+.nav-link::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 50%;
-  background-color: white;
-  transition: all 0.3s ease;
+  background: linear-gradient(90deg, var(--secondary), #ffffff);
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%);
 }
 
-.nav-link:not(.dropdown-toggle):hover::after,
-.nav-link:not(.dropdown-toggle).active::after {
-  width: 90%;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--secondary) !important;
 }
 
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0.5em; /* Arrow နဲ့ စာသားကြား ခြားလိုက်တာ */
-  vertical-align: 0.255em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
 }
 
-.nav-link.dropdown-toggle::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%; /* margin နဲ့ ညှိထားတာ */
-  background-color: white;
-  transform: translateX(-50%);
-  transition: all 0.3s ease;
+/* Dropdown Menu Customization */
+.custom-dropdown {
+  background: rgba(18, 33, 46, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  margin-top: 10px !important;
 }
 
-.nav-link.dropdown-toggle:hover::before {
-  width: 70%; /* arrow ပါတာကြောင့် width ကို နည်းနည်းလျှော့ထားတာ ပိုလှတယ် */
-
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
-.nav-link:hover {
-  color: #ffffff !important;
+.dropdown-item:hover {
+  background: rgba(110, 219, 214, 0.15) !important;
+  color: var(--secondary) !important;
+  transform: translateX(4px);
 }
 
-/* Modern Buttons */
+/* Premium Buttons */
 .btn-login {
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50px;
-  padding: 7px 18px;
-  font-size: 0.85rem;
-  transition: 0.3s;
+  padding: 8px 22px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-
 .btn-login:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-color: white;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .btn-book {
-  background: white;
-  color: var(--primary);
+  background: var(--secondary);
+  color: var(--primary-dark);
   border-radius: 50px;
-  padding: 7px 20px;
+  padding: 9px 24px;
   font-weight: 600;
-  font-size: 0.85rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  font-size: 0.9rem;
+  border: none;
+  box-shadow: 0 4px 15px rgba(110, 219, 214, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-book:hover {
+  background: #ffffff;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-.btn-book:hover {
-  background: #f1f5f9;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+/* Animated Custom Hamburger Icon */
+.custom-toggler {
+  border: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+.custom-toggler:focus {
+  box-shadow: none;
+}
+.toggler-bar {
+  background-color: var(--white);
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+/* X Transformation when opened */
+.custom-toggler:not(.collapsed) .bar-top {
+  transform: translateY(8px) rotate(45deg);
+}
+.custom-toggler:not(.collapsed) .bar-middle {
+  opacity: 0;
+}
+.custom-toggler:not(.collapsed) .bar-bottom {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 991px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
+  /* Mobile Wrapper Dropdown */
+  .navbar-collapse {
+    background: rgba(18, 33, 46, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 25px;
+    margin-top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-nav {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 4px 0;
   }
 
   .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important;
-    font-size: 0.9rem;
-    margin: 0 10px;
-    position: relative;
-    transition: 0.3s;
-  }
-
-  .nav-link:not(.dropdown-toggle)::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1.5px;
-    bottom: 0;
-    left: 50%;
-    background-color: white;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-  }
-
-  .nav-link:not(.dropdown-toggle):hover::after,
-  .nav-link:not(.dropdown-toggle).active::after {
-    width: 80px;
-  }
-
-  .dropdown-toggle::after {
+    font-size: 1rem;
     display: inline-block;
-    margin-left: 0.5em; /* Arrow နဲ့ စာသားကြား ခြားလိုက်တာ */
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
+    margin: 0 100px;
+  }
+  .nav-link::after {
+    display: none;
   }
 
-  .nav-link.dropdown-toggle::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1.5px;
-    bottom: 0;
-    left: 50%; /* margin နဲ့ ညှိထားတာ */
-    background-color: white;
-    transform: translateX(-50%);
-    transition: all 0.3s ease;
-  }
-
-  .nav-link.dropdown-toggle:hover::before {
-    width: 70%; /* arrow ပါတာကြောင့် width ကို နည်းနည်းလျှော့ထားတာ ပိုလှတယ် */
-  }
-
-  .nav-link:hover {
-    color: #ffffff !important;
-  }
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-@media (max-width: 991px) {
-  .footer-section {
+  /* Mobile Dropdown Sub-menu */
+  .custom-dropdown {
+    background: rgba(255, 255, 255, 0.05) !important;
     text-align: center;
+    margin: 7px 0 0 0 !important;
   }
-  .footer-heading::after {
-    left: 50%;
-    transform: translateX(-50%);
+
+  /* Mobile CTA Buttons stretching */
+  .nav-buttons {
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
   }
-  .contact-item {
-    justify-content: center;
+  .btn-login,
+  .btn-book {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  .navbar-nav {
+    width: 100%;
+    padding: 0px 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    display: inline-block;
+  }
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Mobile Dropdown Sub-menu */
+  .custom-dropdown {
+    background: rgba(255, 255, 255, 0.05) !important;
+    text-align: center;
+    margin: 10px 0 0 0 !important;
+  }
+
+  /* Mobile CTA Buttons stretching */
+  .nav-buttons {
+    width: 100%;
+    margin-top: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+  }
+  .btn-login,
+  .btn-book {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
   }
 }

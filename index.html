@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripture | Unlock the Magic of Travel</title>
-    <meta name="application-name" content="Tripture" lang="en" >
+    <meta name="application-name" content="Tripture" lang="en">
     <meta name="google-site-verification" content="tgIaN9WX9wVfpXYKJAtUQJ3FxsBfUFxWCfj3ztF986I" />
 
-    <meta name="description" content="Unlock seamless travel with Tripture. Discover Myanmar's hidden gems and global destinations with curated itineraries by Team Skyway. Plan your trip today!">
+    <meta name="description"
+        content="Unlock seamless travel with Tripture. Discover Myanmar's hidden gems and global destinations with curated itineraries by Team Skyway. Plan your trip today!">
     <meta name="title" content="Tripture | Unlock the Magic of Travel">
-    <meta name="keywords" content="Tripture, Unlock the Magic of Travel, Skyway project, Tripture Travel Agency, Domestic Tour Packages, International Tour Planning, Seamless Adventure Planning,">
+    <meta name="keywords"
+        content="Tripture, Unlock the Magic of Travel, Skyway project, Tripture Travel Agency, Domestic Tour Packages, International Tour Planning, Seamless Adventure Planning,">
 
     <!-- social media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tripture.vercel.app">
     <meta property="og:title" content="Tripture | Unlock the Magic of Travel">
     <meta property="og:site_name" content="Tripture">
-    <meta property="og:description" content="Unlock the unwritten. Experience unique destinations and flawless adventures. Your journey of a lifetime begins with Tripture.">
+    <meta property="og:description"
+        content="Unlock the unwritten. Experience unique destinations and flawless adventures. Your journey of a lifetime begins with Tripture.">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon1.png">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- font awesome  -->
@@ -32,7 +35,8 @@
 
 
     <!-- bootstrap css1 js1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- custom css  -->
     <link rel="stylesheet" href="./style.css">
@@ -61,36 +65,54 @@
 
     <nav class="navbar navbar-expand-lg sticky-top glass-nav">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fa-solid fa-earth-americas me-2 "></i>Tripture
+            <!-- Brand / Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/logo.png" alt="Logo" class="me-2" style="width: 60px; height: 60px;" />
+                <span class="brand-text">Tripture</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Custom Hamburger Toggler for Mobile -->
+            <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-bar bar-top"></span>
+                <span class="toggler-bar bar-middle"></span>
+                <span class="toggler-bar bar-bottom"></span>
             </button>
 
+            <!-- Navbar Menu Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Tours
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/domestic.html">Domestic</a></li>
-                            <li><a class="dropdown-item" href="/international.html">International</a></li>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="./domestic.html"><i
+                                        class="fa-solid fa-map-location-dot me-2"></i>Domestic</a></li>
+                            <li><a class="dropdown-item" href="/international.html"><i
+                                        class="fa-solid fa-globe me-2"></i>International</a></li>
                         </ul>
                     </li>
-                    
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
                 </ul>
 
-                <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
-                    <a href="./signup.html" class="btn btn-login"><i class="fa-solid fa-user-plus me-1"></i> Sign Up</a>
+                <!-- Auth & Call To Action Buttons -->
+                <div class="nav-buttons d-flex flex-column flex-lg-row align-items-center gap-3">
+                    <a href="./signup.html" class="btn btn-login">
+                        <i class="fa-solid fa-user-plus me-2"></i>Sign Up
+                    </a>
                     <a href="./booking.html" class="btn btn-book">
-                        <i class="fa-solid fa-plane-departure me-1"></i> Book Now </i>
+                        <i class="fa-solid fa-plane-departure me-2"></i>Book Now
                     </a>
                 </div>
             </div>
@@ -100,69 +122,95 @@
     <!-- 2. Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row ">
-                
+            <div class="row align-items-center gy-5">
+
                 <!-- Left Text Content Column -->
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0 hero-text-col">
-                    <h1 class="hero-title">Unlock the <span class="text-teal">Magic</span> of Travel</h1>
-                    <p class="hero-description muted">Experience the world’s most luxury destinations with curated journeys designed exclusively for you by Team Skyway.</p>
-                    
-                    <div class="hero-btns-container">
-                        <button class="btn-teal-fill">Explore Packages</button>
+                <div class="col-lg-5 col-12 hero-text-col text-center text-lg-start">
+
+                    <!-- Premium Floating Badge -->
+                    <div class="badge-wrapper mb-3">
+                        <span class="badge bg-glass-premium">
+                            <i class="fa-solid fa-compass text-teal me-2 animate-spin-slow"></i>Explore The Unexplored
+                        </span>
+                    </div>
+
+                    <!-- Premium Typography Title -->
+                    <h1 class="hero-title">
+                        Unlock the <br>
+                        <span class="text-gradient">Magic</span> of Travel
+                    </h1>
+
+                    <!-- Fluid Description -->
+                    <p class="hero-description">
+                        Experience the world’s most luxury destinations with curated journeys designed exclusively for
+                        you by Team Skyway.
+                    </p>
+
+                    <!-- Action Buttons Container -->
+                    <div
+                        class="hero-btns-container d-flex flex-sm-row flex-column justify-content-center justify-content-lg-start gap-3">
+                        <a href="./packages.html" class="btn btn-teal-fill">
+                            Explore Packages <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#tours" class="btn btn-outline-premium">
+                            Learn More
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Right Animated Cards Container Column -->
-                <div class="col-lg-6 col-12 hero-cards-col">
-                    <div class="card-container">
-                        <!-- Glowing Neon Lines -->
-                        <div class="glowing-line" id="line1"></div>
-                        <div class="glowing-line" id="line2"></div>
-                        <div class="glowing-line" id="line3"></div>
 
+                <!-- Right Side: Balanced Geometric Bento Grid -->
+                <div class="col-lg-7 col-12 hero-cards-col">
+                    <div class="modern-grid-container">
 
-                        <!-- Photo Cards (Add your image URLs here) -->
-                        <!-- Card 1: Main (Bungalow) -->
-                        <div class="photo-card" id="card1">
-                            <img src="./assets/international/spain4.jpg" alt="Tripture Luxury Travel - Overwater Bungalow">
+                        <!-- Image 1: Spain (Height Fixed - No longer stretched) -->
+                        <div class="grid-card card-premium-one">
+                            <img src="./assets/international/spain4.jpg" alt="Luxury Travel Spain">
+                            <div class="card-overlay-text">Spain</div>
                         </div>
-                        <!-- Card 2: Upper (Mountain) -->
-                        <div class="photo-card" id="card2">
-                            <img src="./assets/international/vietnam/Phu Quoc Paradise Island.jpg" alt="Tripture Adventure Travel - Mountain Hiker">
+
+                        <!-- Image 2: Vietnam (Wide Top Feature) -->
+                        <div class="grid-card card-premium-two">
+                            <img src="./assets/international/vietnam/Phu Quoc Paradise Island.jpg"
+                                alt="Phu Quoc Paradise Island">
+                            <div class="card-overlay-text">Vietnam</div>
                         </div>
-                        <!-- Card 3: Lower (Desert) -->
-                        <div class="photo-card" id="card3">
-                            <img src="./assets/international/brazil/Iguazu Falls.jpg" alt="Tripture Exotic Travel - Desert Dunes">
+
+                        <!-- Image 3: Brazil (Square Bottom Feature) -->
+                        <div class="grid-card card-premium-three">
+                            <img src="./assets/international/brazil/Iguazu Falls.jpg" alt="Iguazu Falls Brazil">
+                            <div class="card-overlay-text">Brazil</div>
                         </div>
+
                     </div>
                 </div>
 
             </div>
 
-            <!-- Waves 2 Shape Divider -->
+            <!-- Wave Shape Divider (Matches perfectly with section and body background) -->
             <div class="custom-shape-divider-bottom">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
                     <path d="M0,0V120H1200V100C900,100,500,0,0,0Z" class="shape-fill"></path>
                 </svg>
             </div>
         </div>
-
-        
-
     </section>
+
 
     <!-- MAGICAL PATHWAYS SECTION (Gateway) -->
     <section class="pathways-section">
         <div class="container">
             <!-- Minimalist Section Title -->
-            <h2 class="section-title text-center">Magical Pathways</h2>
+            <h2 class="section-title text-center display-5">Magical Pathways</h2>
 
             <div class="row g-4">
-                
+
                 <!-- Domestic Tours Gateway Card (left) -->
-                <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-once="false" data-aos-delay="200" data-aos-duration="1000">
+                <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-once="false" data-aos-delay="200"
+                    data-aos-duration="1000">
                     <!-- Add your local image URL from image_5.png -->
-                    <a href="./domestic.html" class="tour-gateway-card" style="background-image: url('./assets/Domestic/bagan.jpg');">
+                    <a href="./domestic.html" class="tour-gateway-card"
+                        style="background-image: url('./assets/Domestic/bagan.jpg');">
                         <!-- Subtle compass icon top right to match planning vibe -->
                         <div class="gateway-icon">
                             <i class="fa-solid fa-compass"></i>
@@ -177,9 +225,11 @@
                 </div>
 
                 <!-- International Tours Gateway Card (right) -->
-                <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-once="false" data-aos-delay="400" data-aos-duration="1000">
+                <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-once="false" data-aos-delay="400"
+                    data-aos-duration="1000">
                     <!-- Add your global image URL from image_5.png -->
-                    <a href="./international.html" class="tour-gateway-card" style="background-image: url('./assets/international/vietnam/Hanoi.jpg');">
+                    <a href="./international.html" class="tour-gateway-card"
+                        style="background-image: url('./assets/international/vietnam/Hanoi.jpg');">
                         <!-- Subtle globe icon top right -->
                         <div class="gateway-icon">
                             <i class="fa-solid fa-globe"></i>
@@ -201,18 +251,20 @@
     <!-- TOUR SHOWCASE SECTION (Domestic) -->
     <section class="tour-showcase-section">
         <div class="container">
-            
+
             <!-- Section Title (Bold, Modern) -->
             <h2 class="showcase-section-title text-center mb-5">Explore Our Crafted Tours</h2>
 
-            <div class="row showcase-container modern-shadow gx-0" data-aos="zoom-out" data-aos-once="false" data-aos-delay="100" data-aos-duration="800">
-                
+            <div class="row showcase-container modern-shadow gx-0" data-aos="zoom-out" data-aos-once="false"
+                data-aos-delay="100" data-aos-duration="800">
+
                 <!-- Left Side: Main Tour Image (col-6 default, col-12 mobile) -->
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="main-tour-view">
                         <!-- Dynamic Main Image (Change URL based on selection) -->
                         <div class="main-tour-img-wrapper">
-                            <img id="mainTourImg" src="./assets/Domestic/bagan2.jpg" alt="Featured Tour - Bagan" class="main-tour-img">
+                            <img id="mainTourImg" src="./assets/Domestic/bagan2.jpg" alt="Featured Tour - Bagan"
+                                class="main-tour-img">
                         </div>
                     </div>
                 </div>
@@ -220,26 +272,31 @@
                 <!-- Right Side: Tour Content & Gallery (col-6 default, col-12 mobile) -->
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="tour-details-col glass-effect h-100">
-                        
+
                         <!-- Dynamic Tour Header (Change Title, Price, Description) -->
                         <div class="tour-header" id="tourHeader">
                             <h3 class="tour-title fw-bold" id="tourTitle">Bagan Hidden Gems</h3>
                             <p class="tour-price" id="tourPrice">From $299 /person</p>
-                            <p class="tour-description text-muted lead" id="tourDescription">Explore ancient temples of Bagan through an extraordinary lens. Perfect for modern explorers seeking authentic connections.</p>
+                            <p class="tour-description text-muted lead" id="tourDescription">Explore ancient temples of
+                                Bagan through an extraordinary lens. Perfect for modern explorers seeking authentic
+                                connections.</p>
                         </div>
 
                         <!-- Bottom Gallery (Thumbnails - Click to switch) -->
                         <div class="tour-gallery">
                             <!-- Thumb 1 (Active) -->
-                            <div class="gallery-thumb active" onclick="switchTour('Bagan Hidden Gems', '$299 /person', 'Explore ancient temples of Bagan through an extraordinary lens.', './assets/Domestic/bagan2.jpg', this)">
+                            <div class="gallery-thumb active"
+                                onclick="switchTour('Bagan Hidden Gems', '$299 /person', 'Explore ancient temples of Bagan through an extraordinary lens.', './assets/Domestic/bagan2.jpg', this)">
                                 <img src="./assets/Domestic/bagan2.jpg" alt="Bagan Thumbnail">
                             </div>
                             <!-- Thumb 2 -->
-                            <div class="gallery-thumb" onclick="switchTour('Inle Lake Serenity', '$349 /person', 'Row through Inle Lake at sunset. Experience unique stilt houses and timeless culture.', './assets/Domestic/inlay2.jpg', this)">
+                            <div class="gallery-thumb"
+                                onclick="switchTour('Inle Lake Serenity', '$349 /person', 'Row through Inle Lake at sunset. Experience unique stilt houses and timeless culture.', './assets/Domestic/inlay2.jpg', this)">
                                 <img src="./assets/Domestic/inlay2.jpg" alt="Inle Lake Thumbnail">
                             </div>
                             <!-- Thumb 3 -->
-                            <div class="gallery-thumb" onclick="switchTour('Mandalay City Tour', '$499 /person', 'The cultural heart of Myanmar,where ancient royalty meets vibrant local traditions.', './assets/Domestic/mandalay2.jpg', this)">
+                            <div class="gallery-thumb"
+                                onclick="switchTour('Mandalay City Tour', '$499 /person', 'The cultural heart of Myanmar,where ancient royalty meets vibrant local traditions.', './assets/Domestic/mandalay2.jpg', this)">
                                 <img src="./assets/Domestic/mandalay2.jpg" alt="Upain Thumbnail">
                             </div>
                         </div>
@@ -260,10 +317,11 @@
     <section class="features-section">
         <div class="container text-center">
             <!-- Section Title (Bold, Modern, with Teal accent) -->
-            <h2 class="features-title text-center mb-5 mt-3">Why Tripture for Your <br><span>Seamless Travel Experience</span></h2>
+            <h2 class="features-title text-center mb-5 mt-3">Why Tripture for Your <br><span>Seamless Travel
+                    Experience</span></h2>
 
             <div class="row g-5">
-                
+
                 <!-- Feature 1: Crafted Itineraries (Itinerary Planning focused) -->
                 <div class="col-lg-4 col-md-6 col-12 feature-col">
                     <div class="feature-item-card">
@@ -272,7 +330,8 @@
                             <i class="fa-solid fa-map-location-dot"></i>
                         </div>
                         <h4 class="fw-bold">Crafted Itineraries</h4>
-                        <p>Designed exclusively for you. No templates, just personalized journeys that match your unique rhythm and desires.</p>
+                        <p>Designed exclusively for you. No templates, just personalized journeys that match your unique
+                            rhythm and desires.</p>
                     </div>
                 </div>
 
@@ -284,7 +343,8 @@
                             <i class="fa-solid fa-headset"></i>
                         </div>
                         <h4 class="fw-bold">Seamless Planning</h4>
-                        <p>Unlock the magic of worry-free travel. From booking to return, Team Skyway handles the details flawlessly.</p>
+                        <p>Unlock the magic of worry-free travel. From booking to return, Team Skyway handles the
+                            details flawlessly.</p>
                     </div>
                 </div>
 
@@ -296,7 +356,8 @@
                             <i class="fa-solid fa-wand-sparkles"></i>
                         </div>
                         <h4 class="fw-bold">Magical Moments</h4>
-                        <p>Authentic local interactions and exclusive accesses to the world’s hidden gems. Create stories that last forever.</p>
+                        <p>Authentic local interactions and exclusive accesses to the world’s hidden gems. Create
+                            stories that last forever.</p>
                     </div>
                 </div>
 
@@ -343,7 +404,8 @@
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">We accept all major credit cards, mobile banking, and bank transfers for your convenience.</div>
+                                <div class="accordion-body text-muted">We accept all major credit cards, mobile banking,
+                                    and bank transfers for your convenience.</div>
                             </div>
                         </div>
                         <div class="accordion-item border mb-2 rounded-3">
@@ -354,7 +416,8 @@
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">You can reach us 24/7 via email at travelwithtripture@gmail.com or through our live chat</div>
+                                <div class="accordion-body text-muted">You can reach us 24/7 via email at
+                                    travelwithtripture@gmail.com or through our live chat</div>
                             </div>
                         </div>
                     </div>
@@ -389,54 +452,75 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Start Footer -->
     <footer class="bg-dark-blue text-white pt-5 pb-3">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-3">
-                        <h5 class="fw-bold text-uppercase mb-4">Tripture</h5>
-                        <p class="small opacity-75">We create unforgettable travel experiences around the world. Your
-                            journey, our passion.</p>
-                        <div class="d-flex gap-3 fs-5 mt-3">
-                            <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i> <i class="bi bi-twitter-x"></i>
-                            <i class="bi bi-youtube"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 ps-lg-5">
-                        <h6 class="fw-bold mb-4">COMPANY</h6>
-                        <ul class="list-unstyled small opacity-75 lh-lg">
-                            <li><a href="./about.html" style="text-decoration: none; color:inherit">About Us</a></li>
-                            <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Team Members</li>
-                            <li>Project Details</li>
-                            <li><a href="mailto:skywayteam@gmail.com" style="text-decoration: none; color:inherit">Contact Developers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <h6 class="fw-bold mb-4">TRAVEL INFO</h6>
-                        <ul class="list-unstyled small opacity-75 lh-lg">
-                            <li>Travel Guides</li>
-                            <li>FAQs</li>
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policy</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="fw-bold mb-4">PAYMENT METHODS</h6>
-                        <div class="d-flex flex-wrap gap-2 payment-icon">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFYudsqWg9jjosSQLLIVrmywslPWvlXck-w&s" alt="mastercard">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR307JOO-6NJ84smCbefUN4RGVKRDVrh0Dilg&s" alt="visa">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ns1YY_la2zpWjImynS670i2Tktv9zPw4rQ&s" alt="Paypal">
-                            
-                            
-                        </div>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3">
+                    <h5 class="fw-bold text-uppercase mb-4">Tripture</h5>
+                    <p class="small opacity-75">We create unforgettable travel experiences around the world. Your
+                        journey, our passion.</p>
+                    <div class="d-flex gap-3 fs-5 mt-3">
+                        <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i> <i class="bi bi-twitter-x"></i>
+                        <i class="bi bi-youtube"></i>
                     </div>
                 </div>
-                <hr class="my-4 opacity-25">
-                <div class="d-flex flex-wrap justify-content-between small opacity-50">
-                    <p>&copy; <span id="year"></span> Tripture. Developed by Skyway Team(NUCS). All Rights Reserved.</p>
-                    <div class="d-flex gap-3"><span>Terms & Conditions</span> <span>Privacy Policy</span></div>
+                <div class="col-md-3 col-6 ps-lg-5">
+                    <h6 class="fw-bold mb-4">COMPANY</h6>
+                    <ul class="list-unstyled small opacity-75 lh-lg">
+                        <li><a href="./about.html" style="text-decoration: none; color:inherit">About Us</a></li>
+                        <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Team Members
+                        </li>
+                        <li>Project Details</li>
+                        <li><a href="mailto:skywayteam@gmail.com" style="text-decoration: none; color:inherit">Contact
+                                Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h6 class="fw-bold mb-4">TRAVEL INFO</h6>
+                    <ul class="list-unstyled small opacity-75 lh-lg">
+                        <li>Travel Guides</li>
+                        <li>FAQs</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-4">PAYMENT METHODS</h6>
+                    <div class="d-flex flex-wrap gap-2 payment-icon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFYudsqWg9jjosSQLLIVrmywslPWvlXck-w&s"
+                            alt="mastercard">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR307JOO-6NJ84smCbefUN4RGVKRDVrh0Dilg&s"
+                            alt="visa">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ns1YY_la2zpWjImynS670i2Tktv9zPw4rQ&s"
+                            alt="Paypal">
+
+
+                    </div>
                 </div>
             </div>
+            <hr class="my-4 opacity-25">
+            <div class="d-flex flex-wrap justify-content-between small opacity-50">
+                <p>&copy; <span id="year"></span> Tripture. Developed by Skyway Team(NUCS). All Rights Reserved.</p>
+                <div class="d-flex gap-3"><span>Terms & Conditions</span> <span>Privacy Policy</span></div>
+            </div>
+        </div>
     </footer>
     <!-- End Footer  -->
 
@@ -444,36 +528,34 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
 
     <!-- JAVASCRIPT FOR INTERACTIVE GALLERY -->
     <script>
         // Function to switch tour content based on clicked thumbnail
         function switchTour(title, price, description, mainImgUrl, clickedThumb) {
-            
+
             // 1. Get Elements
             const mainImg = document.getElementById('mainTourImg');
             const tourHeader = document.getElementById('tourHeader');
             const tourTitle = document.getElementById('tourTitle');
             const tourPrice = document.getElementById('tourPrice');
             const tourDescription = document.getElementById('tourDescription');
-            
+
             // 2. Add Animation Class (triggers fade out)
             mainImg.classList.add('changing');
             tourHeader.classList.add('changing');
-            
+
             // 3. Wait for fade out, then change content
             setTimeout(() => {
                 // Update Text Content
                 tourTitle.textContent = title;
                 tourPrice.textContent = price;
                 tourDescription.textContent = description;
-                
+
                 // Update Image Source
                 mainImg.src = mainImgUrl;
-                
+
                 // Remove Animation Class (triggers fade in)
                 mainImg.classList.remove('changing');
                 tourHeader.classList.remove('changing');
@@ -501,7 +583,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- 2. Bootstrap 5 JS Bundle (Includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
     <!-- 3. Custom GSAP Scroll Animation Script -->
     <script>
@@ -511,8 +595,8 @@
         // --- Parallax Scroll Animation for Desktop Only (> 991px) ---
         ScrollTrigger.matchMedia({
             // Desktop condition
-            "(min-width: 992px)": function() {
-                
+            "(min-width: 992px)": function () {
+
                 // Create a GSAP Timeline linked to the Scroll
                 const tl = gsap.timeline({
                     scrollTrigger: {
@@ -525,22 +609,22 @@
                 });
 
                 // Define the Parallax animations for each card
-                
+
                 // Card 1: Main card moves slowly down
-                tl.to("#card1", { y: 150, ease: "none" }, 0); 
-                
+                tl.to("#card1", { y: 150, ease: "none" }, 0);
+
                 // Card 2: Upper card moves faster down
                 tl.to("#card2", { y: 250, ease: "none" }, 0);
-                
+
                 // Card 3: Lower card moves up (reverse parallax)
                 tl.to("#card3", { y: -120, ease: "none" }, 0);
 
                 // Animate the glowing lines subtly with the scroll
                 tl.to(".glowing-line", { opacity: 0.8, y: 80, ease: "none" }, 0);
             },
-            
+
             // Mobile/Tablet condition (kill animation on smaller screens)
-            "(max-width: 991px)": function() {
+            "(max-width: 991px)": function () {
                 // GSAP matchMedia automatically handles killing ScrollTriggers not within the current media query.
                 // Cards will use their default stacked CSS positioning on mobile.
             }
@@ -548,4 +632,5 @@
     </script>
 
 </body>
+
 </html>

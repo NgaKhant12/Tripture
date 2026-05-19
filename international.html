@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Tours | Tripture </title>
 
-    <meta name="description" content="Discover the best international tour packages from Myanmar. Explore affordable deals to Asia, Europe, and beyond with Tripture. Book your dream vacation today!">
-    <meta name="keywords" content="international tours from Myanmar, global tour packages, holiday deals Myanmar, overseas trips from Yangon">
+    <meta name="description"
+        content="Discover the best international tour packages from Myanmar. Explore affordable deals to Asia, Europe, and beyond with Tripture. Book your dream vacation today!">
+    <meta name="keywords"
+        content="international tours from Myanmar, global tour packages, holiday deals Myanmar, overseas trips from Yangon">
     <meta name="author" content="Tripture">
 
 
@@ -15,9 +17,10 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tripture.vercel.app/international.html">
     <meta property="og:title" content="Explore the World: Best International Tours from Myanmar">
-    <meta property="og:description" content="Check out our full list of international tour packages. High-quality services, expert guides, and unforgettable experiences.">
-    <meta property="og:image" content="https://tripture.vercel.app/assets/international/maldives.jpg"> 
-    
+    <meta property="og:description"
+        content="Check out our full list of international tour packages. High-quality services, expert guides, and unforgettable experiences.">
+    <meta property="og:image" content="https://tripture.vercel.app/assets/international/maldives.jpg">
+
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon1.png">
 
     <!-- font awesome -->
@@ -51,41 +54,60 @@
     <!-- Start Nav bar -->
     <nav class="navbar navbar-expand-lg sticky-top glass-nav">
         <div class="container">
-            <a class="navbar-brand" href="/index.html">
-                <i class="fa-solid fa-earth-americas me-2 "></i>Tripture
+            <!-- Brand / Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img src="./assets/logo.png" alt="Logo" class="me-2" style="width: 60px; height: 60px;" />
+                <span class="brand-text">Tripture</span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Custom Hamburger Toggler for Mobile -->
+            <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-bar bar-top"></span>
+                <span class="toggler-bar bar-middle"></span>
+                <span class="toggler-bar bar-bottom"></span>
             </button>
 
+            <!-- Navbar Menu Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                <ul class="navbar-nav mx-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link " href="./index.html">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Tours
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./domestic.html">Domestic</a></li>
-                            <li><a class="dropdown-item" href="#">International</a></li>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="./domestic.html"><i
+                                        class="fa-solid fa-map-location-dot me-2"></i>Domestic</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fa-solid fa-globe me-2"></i>International</a></li>
                         </ul>
                     </li>
-                    
-                    <li class="nav-item"><a class="nav-link" href="/about.html" target="_blank">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq-contact">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
                 </ul>
 
-                <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
-                    <a href="./signup.html" class="btn btn-login"><i class="fa-solid fa-user-plus me-1"></i> Sign Up</a>
+                <!-- Auth & Call To Action Buttons -->
+                <div class="nav-buttons d-flex flex-column flex-lg-row align-items-center gap-3">
+                    <a href="./signup.html" class="btn btn-login">
+                        <i class="fa-solid fa-user-plus me-2"></i>Sign Up
+                    </a>
                     <a href="./booking.html" class="btn btn-book">
-                        <i class="fa-solid fa-plane-departure me-1"></i> Book Now </i>
+                        <i class="fa-solid fa-plane-departure me-2"></i>Book Now
                     </a>
                 </div>
             </div>
         </div>
     </nav>
+
     <!-- End Nav bar -->
 
 
@@ -96,7 +118,8 @@
                 <div class="col-lg-8 hero-content box">
                     <h6 class="text-uppercase tracking-wider text-teal">Explore the World</h6>
                     <h1 class="display-4 fw-bold mt-3">Unforgettable Journeys, <br> Unique Experiences.</h1>
-                    <p class="lead text-muted my-4">Discover amazing places with our curated travel packages. </br>Adventure,
+                    <p class="lead text-muted my-4">Discover amazing places with our curated travel packages.
+                        </br>Adventure,
                         culture, and memories await!</p>
 
                 </div>
@@ -108,9 +131,9 @@
 
     <!-- packages section  -->
     <section class="container">
-        
+
         <!-- Tabs -->
-        <div class="tapitem"> 
+        <div class="tapitem">
             <button class="tab-btn active" data-index="0">ASIA</button>
             <button class="tab-btn" data-index="1">EUROPE</button>
             <button class="tab-btn" data-index="2">NORTH AMERICA</button>
@@ -129,29 +152,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/vietnam/Ba Na Hills.jpg" class="card-img-top" alt="vietnam">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/vietnam/Ba Na Hills.jpg" class="card-img-top"
+                                        alt="vietnam">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Vietnam</h5>
                                     <p class="text-muted small mb-2">7 Days / 6 Nights</p>
                                     <p class="card-text text-muted small mb-3">VIETNAM COAST-TO-COAST</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#vietnamdescrip" role="button" aria-expanded="false" aria-controls="vietnamdescrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#vietnamdescrip" role="button" aria-expanded="false"
+                                            aria-controls="vietnamdescrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="vietnamdescrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Hanoi Old Quarter Exploration</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ha Long Bay Luxury Cruise (Overnight)</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ba Na Hills (Golden Bridge)</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Hoi An Ancient Town</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Phu Quoc Island Hopping & Cable Car</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Hanoi Old
+                                                    Quarter Exploration</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ha Long Bay
+                                                    Luxury Cruise (Overnight)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ba Na Hills
+                                                    (Golden Bridge)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Hoi An
+                                                    Ancient Town</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Phu Quoc
+                                                    Island Hopping & Cable Car</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -164,12 +196,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$950</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$950</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -179,29 +212,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/singapore/Marina Bay.jpg" class="card-img-top" alt="singapore">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/singapore/Marina Bay.jpg" class="card-img-top"
+                                        alt="singapore">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Singapore</h5>
                                     <p class="text-muted small mb-2">2 Days / 1 Nights</p>
                                     <p class="card-text text-muted small mb-3">SINGAPORE QUICK ESCAPE</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#sgpdescrip" role="button" aria-expanded="false" aria-controls="sgpdescrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#sgpdescrip" role="button" aria-expanded="false"
+                                            aria-controls="sgpdescrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="sgpdescrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Merlion Park & Marina Bay Sands</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Gardens by the Bay (Cloud Forest & Flower Dome)</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Clarke Quay Night Walk</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sentosa Island & Universal Studios Singapore</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Jewel Changi (HSBC Rain Vortex)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Merlion
+                                                    Park & Marina Bay Sands</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Gardens by
+                                                    the Bay (Cloud Forest & Flower Dome)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Clarke Quay
+                                                    Night Walk</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sentosa
+                                                    Island & Universal Studios Singapore</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Jewel
+                                                    Changi (HSBC Rain Vortex)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -214,12 +256,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$450</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$450</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -229,29 +272,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/thailand/Andaman Island.jpg" class="card-img-top" alt="thailand">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/thailand/Andaman Island.jpg" class="card-img-top"
+                                        alt="thailand">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Thailand</h5>
                                     <p class="text-muted small mb-2">3 Days / 2 Nights</p>
                                     <p class="card-text text-muted small mb-3">TREASURES OF THAILAND</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#th-descrip" role="button" aria-expanded="false" aria-controls="th-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#th-descrip" role="button" aria-expanded="false"
+                                            aria-controls="th-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="th-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>The Grand Palace & Wat Arun</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ancient City of Ayutthaya</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Phuket Old Town & Big Buddha</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Patong Beach Experience</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Railay Beach (Krabi) Speedboat Trip</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>The Grand
+                                                    Palace & Wat Arun</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ancient
+                                                    City of Ayutthaya</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Phuket Old
+                                                    Town & Big Buddha</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Patong
+                                                    Beach Experience</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Railay
+                                                    Beach (Krabi) Speedboat Trip</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -264,12 +316,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$550</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$550</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -279,29 +332,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/indonesia/Raja Ampat.jpg" class="card-img-top" alt="indonesia">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/indonesia/Raja Ampat.jpg" class="card-img-top"
+                                        alt="indonesia">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Indonesia</h5>
                                     <p class="text-muted small mb-2">10 Days / 9 Nights</p>
                                     <p class="card-text text-muted small mb-3">ULTIMATE INDONESIA EXPEDITION</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#indo-descrip" role="button" aria-expanded="false" aria-controls="indo-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#indo-descrip" role="button" aria-expanded="false"
+                                            aria-controls="indo-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="indo-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Borobudur & Prambanan Temples</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mount Bromo Sunrise Jeep Safari</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ubud Rice Terraces & Uluwatu Temple</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Komodo Dragon Encounter (Komodo Island)</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Raja Ampat Marine Biodiversity</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Borobudur &
+                                                    Prambanan Temples</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mount Bromo
+                                                    Sunrise Jeep Safari</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ubud Rice
+                                                    Terraces & Uluwatu Temple</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Komodo
+                                                    Dragon Encounter (Komodo Island)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Raja Ampat
+                                                    Marine Biodiversity</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -314,12 +376,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$600</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$600</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -329,29 +392,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/hongkong/Disneyland.jpg" class="card-img-top" alt="hongkong">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/hongkong/Disneyland.jpg" class="card-img-top"
+                                        alt="hongkong">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Hong Kong</h5>
                                     <p class="text-muted small mb-2">3 Days / 2 Nights</p>
                                     <p class="card-text text-muted small mb-3">MAGIC & HEIGHTS OF HONG KONG</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#hk-descrip" role="button" aria-expanded="false" aria-controls="hk-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#hk-descrip" role="button" aria-expanded="false"
+                                            aria-controls="hk-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="hk-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Victoria Peak & Peak Tram</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sky Terrace 428</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Disneyland or Ocean Park Adventure</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ngong Ping 360 Cable Car</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Tian Tan Buddha (Big Buddha)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Victoria
+                                                    Peak & Peak Tram</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sky Terrace
+                                                    428</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Disneyland
+                                                    or Ocean Park Adventure</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ngong Ping
+                                                    360 Cable Car</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Tian Tan
+                                                    Buddha (Big Buddha)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -364,12 +436,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$2200</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$2200</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -379,29 +452,39 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/japan/Mount Fuji.jpg" class="card-img-top" alt="japan">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/japan/Mount Fuji.jpg" class="card-img-top"
+                                        alt="japan">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Japan</h5>
                                     <p class="text-muted small mb-2">4 Days / 3 Nights</p>
                                     <p class="card-text text-muted small mb-3">ENCHANTING JAPAN</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#japan-descrip" role="button" aria-expanded="false" aria-controls="japan-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#japan-descrip" role="button" aria-expanded="false"
+                                            aria-controls="japan-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="japan-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>teamLab Borderless</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Shibuya Crossing</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mount Fuji & Lake Kawaguchi</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fushimi Inari Shrine</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Kiyomizu-dera Temple</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>teamLab
+                                                    Borderless</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Shibuya
+                                                    Crossing</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Mount Fuji
+                                                    & Lake Kawaguchi</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fushimi
+                                                    Inari Shrine</li>
+                                                <li><i
+                                                        class="bi bi-check-circle-fill text-primary me-2"></i>Kiyomizu-dera
+                                                    Temple</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -414,17 +497,18 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$400</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$400</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
                 <!-- END ASIA -->
@@ -438,29 +522,40 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/switzerland.jpg" class="card-img-top" alt="switzerland">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/switzerland.jpg" class="card-img-top"
+                                        alt="switzerland">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Switzerland</h5>
                                     <p class="text-muted small mb-2">7 Days / 6 Nights</p>
-                                    <p class="card-text text-muted small mb-3">City + Lake + Mountain + Glacier + Luxury vibe</p>
-                                    
+                                    <p class="card-text text-muted small mb-3">City + Lake + Mountain + Glacier + Luxury
+                                        vibe</p>
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#switzerlanddescrip" role="button" aria-expanded="false" aria-controls="switzerlanddescrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#switzerlanddescrip" role="button" aria-expanded="false"
+                                            aria-controls="switzerlanddescrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="switzerlanddescrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Zurich – city life + shopping</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Lucerne – lake + old town</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Interlaken – adventure capital</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Geneva – lake + luxury city</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Jungfraujoch – “Top of Europe”</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Zurich –
+                                                    city life + shopping</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Lucerne –
+                                                    lake + old town</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Interlaken
+                                                    – adventure capital</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Geneva –
+                                                    lake + luxury city</li>
+                                                <li><i
+                                                        class="bi bi-check-circle-fill text-primary me-2"></i>Jungfraujoch
+                                                    – “Top of Europe”</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -473,12 +568,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$2050</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$2050</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -489,28 +585,36 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/france.jpg" class="card-img-top" alt="france">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Central France</h5>
                                     <p class="text-muted small mb-2">6 Days / 5 Nights</p>
                                     <p class="card-text text-muted small mb-3">PARIS & ÎLE-DE-FRANCE CLASSIC TOUR</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#francedescrip" role="button" aria-expanded="false" aria-controls="francedescrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#francedescrip" role="button" aria-expanded="false"
+                                            aria-controls="francedescrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="francedescrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Eiffel Tower</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Louvre Museum</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Arc de Triomphe</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Palace of Versailles</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Disneyland Paris</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Eiffel
+                                                    Tower</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Louvre
+                                                    Museum</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Arc de
+                                                    Triomphe</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Palace of
+                                                    Versailles</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Disneyland
+                                                    Paris</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -523,12 +627,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1650</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1650</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -539,28 +644,36 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/italy1.jpg" class="card-img-top" alt="thailand">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Italy's “history heart”</h5>
                                     <p class="text-muted small mb-2">5 Days / 4 Nights</p>
                                     <p class="card-text text-muted small mb-3">ROME & CENTRAL ITALY CLASSIC TOUR</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#italy-descrip" role="button" aria-expanded="false" aria-controls="italy-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#italy-descrip" role="button" aria-expanded="false"
+                                            aria-controls="italy-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="italy-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Colosseum</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Roman Forum</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Pantheon</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Trevi Fountain</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Vatican City</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Colosseum
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Roman Forum
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Pantheon
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Trevi
+                                                    Fountain</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Vatican
+                                                    City</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -573,12 +686,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1600</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1600</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -589,27 +703,33 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/spain1.jpg" class="card-img-top" alt="spain">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Spain's “royal + cultural heart”</h5>
                                     <p class="text-muted small mb-2">5 Days / 4 Nights</p>
                                     <p class="card-text text-muted small mb-3">MADRID & CENTRAL SPAIN CLASSIC TOUR</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#spain-descrip" role="button" aria-expanded="false" aria-controls="spain-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#spain-descrip" role="button" aria-expanded="false"
+                                            aria-controls="spain-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="spain-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
                                                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Madrid</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Royal Palace of Madrid</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Prado Museum</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Puerta del Sol</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Royal
+                                                    Palace of Madrid</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Prado
+                                                    Museum</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Puerta del
+                                                    Sol</li>
                                                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Toledo</li>
                                             </ul>
                                         </div>
@@ -623,17 +743,18 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1400</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1400</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- END EUROPE -->
@@ -647,28 +768,36 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/us1.jpg" class="card-img-top" alt="us">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">United State</h5>
                                     <p class="text-muted small mb-2">5 Days / 4 Nights</p>
                                     <p class="card-text text-muted small mb-3">NEW YORK & EAST COAST CLASSIC TOUR</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#us-descrip" role="button" aria-expanded="false" aria-controls="us-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#us-descrip" role="button" aria-expanded="false"
+                                            aria-controls="us-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="us-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>New York City</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Statue of Liberty</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Times Square</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Central Park</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Washington, D.C.</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>New York
+                                                    City</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Statue of
+                                                    Liberty</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Times
+                                                    Square</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Central
+                                                    Park</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Washington,
+                                                    D.C.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -681,12 +810,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1,890</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1,890</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -696,29 +826,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/newzealand.jpg" class="card-img-top" alt="Newzeland">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/newzealand.jpg" class="card-img-top"
+                                        alt="Newzeland">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Newzeland</h5>
                                     <p class="text-muted small mb-2">9 Days / 8 Nights</p>
                                     <p class="card-text text-muted small mb-3">North Island + South Island</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#newzeland-descrip" role="button" aria-expanded="false" aria-controls="newzeland-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#newzeland-descrip" role="button" aria-expanded="false"
+                                            aria-controls="newzeland-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="newzeland-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Auckland</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Rotorua</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Milford Sound</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Wellington</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Queenstown</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Auckland
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Rotorua
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Milford
+                                                    Sound</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Wellington
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Queenstown
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -731,12 +870,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$2550</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$2550</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -746,29 +886,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/australia.jpg" class="card-img-top" alt="australia">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/australia.jpg" class="card-img-top"
+                                        alt="australia">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Australia</h5>
                                     <p class="text-muted small mb-2">9 Days / 8 Nights</p>
-                                    <p class="card-text text-muted small mb-3">City tour,coastal drive,natural wonders combo</p>
-                                    
+                                    <p class="card-text text-muted small mb-3">City tour,coastal drive,natural wonders
+                                        combo</p>
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#aus-descrip" role="button" aria-expanded="false" aria-controls="aus-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#aus-descrip" role="button" aria-expanded="false"
+                                            aria-controls="aus-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="aus-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
                                                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sydney</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sydney Opera House</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sydney Harbour Bridge</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Melbourne</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Great Ocean Road</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sydney
+                                                    Opera House</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sydney
+                                                    Harbour Bridge</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Melbourne
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Great Ocean
+                                                    Road</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -781,12 +930,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$2450</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$2450</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -797,28 +947,36 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/canada1.jpg" class="card-img-top" alt="canada">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Canada</h5>
                                     <p class="text-muted small mb-2">7 Days / 6 Nights</p>
                                     <p class="card-text text-muted small mb-3">EAST CANADA CLASSIC TOUR</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#canada-descrip" role="button" aria-expanded="false" aria-controls="canada-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#canada-descrip" role="button" aria-expanded="false"
+                                            aria-controls="canada-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="canada-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Toronto</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>CN Tower</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Niagara Falls</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Montreal</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Quebec City</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Toronto
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>CN Tower
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Niagara
+                                                    Falls</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Montreal
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Quebec City
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -831,12 +989,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1550</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1550</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -854,29 +1013,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/india/The Taj Mahal.jpg" class="card-img-top" alt="india">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/india/The Taj Mahal.jpg" class="card-img-top"
+                                        alt="india">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">India</h5>
                                     <p class="text-muted small mb-2">4 Days / 3 Nights</p>
                                     <p class="card-text text-muted small mb-3">Royal Past & Vibrant Present</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#india-descrip" role="button" aria-expanded="false" aria-controls="india-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#india-descrip" role="button" aria-expanded="false"
+                                            aria-controls="india-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="india-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Jama Masjid & Red Fort</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Humayun’s Tomb & Qutub Minar</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>The Taj Mahal</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Agra Fort</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fatehpur Sikri</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Jama Masjid
+                                                    & Red Fort</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Humayun’s
+                                                    Tomb & Qutub Minar</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>The Taj
+                                                    Mahal</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Agra Fort
+                                                </li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fatehpur
+                                                    Sikri</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -889,12 +1057,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$1550</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$1550</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -905,27 +1074,34 @@
                             <div class="travel-card">
                                 <div class="img-box">
                                     <img src="./assets/international/maldives.jpg" class="card-img-top" alt="maldives">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Maldives</h5>
                                     <p class="text-muted small mb-2">4 Days / 3 Nights</p>
                                     <p class="card-text text-muted small mb-3">Turquoise Lagoons & Pristine Sands</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#maldives-descrip" role="button" aria-expanded="false" aria-controls="maldives-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#maldives-descrip" role="button" aria-expanded="false"
+                                            aria-controls="maldives-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="maldives-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>House Reef Snorkeling</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sandbank Picnic</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Maldivian Sunset Cruise</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Overwater & Beach Villa Experience</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>House Reef
+                                                    Snorkeling</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sandbank
+                                                    Picnic</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Maldivian
+                                                    Sunset Cruise</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Overwater &
+                                                    Beach Villa Experience</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -938,12 +1114,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$650</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$650</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -953,29 +1130,39 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="https://images.pexels.com/photos/3680912/pexels-photo-3680912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="dubai">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="https://images.pexels.com/photos/3680912/pexels-photo-3680912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="card-img-top" alt="dubai">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Dubai</h5>
                                     <p class="text-muted small mb-2">4 Days / 3 Nights</p>
-                                    <p class="card-text text-muted small mb-3">Futuristic Ambition & Arabian Tradition</p>
-                                    
+                                    <p class="card-text text-muted small mb-3">Futuristic Ambition & Arabian Tradition
+                                    </p>
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#dubai-descrip" role="button" aria-expanded="false" aria-controls="dubai-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#dubai-descrip" role="button" aria-expanded="false"
+                                            aria-controls="dubai-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="dubai-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Dubai Marina Dhow Cruise</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Desert Safari Adventure</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sheikh Zayed Grand Mosque</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ferrari World</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Burj Khalifa & Dubai Mall</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Dubai
+                                                    Marina Dhow Cruise</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Desert
+                                                    Safari Adventure</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Sheikh
+                                                    Zayed Grand Mosque</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Ferrari
+                                                    World</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Burj
+                                                    Khalifa & Dubai Mall</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -988,12 +1175,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$950</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$950</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -1003,29 +1191,38 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="travel-card">
                                 <div class="img-box">
-                                    <img src="./assets/international/brazil/Rio de Janeiro.jpg" class="card-img-top" alt="brazil">
-                                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
+                                    <img src="./assets/international/brazil/Rio de Janeiro.jpg" class="card-img-top"
+                                        alt="brazil">
+                                    <span
+                                        class="badge bg-white text-dark position-absolute top-0 end-0 m-3 shadow-sm rounded-pill">⭐4.8/5</span>
                                 </div>
-            
+
                                 <div class="card-body p-4">
                                     <h5 class="fw-bold mb-1">Brazil</h5>
                                     <p class="text-muted small mb-2">8 Days / 7 Nights</p>
                                     <p class="card-text text-muted small mb-3">The Marvelous City & Natural Wonders</p>
-                                    
+
                                     <p>
-                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse" href="#brazil-descrip" role="button" aria-expanded="false" aria-controls="brazil-descrip">
+                                        <a class="text-primary text-decoration-none" data-bs-toggle="collapse"
+                                            href="#brazil-descrip" role="button" aria-expanded="false"
+                                            aria-controls="brazil-descrip">
                                             Read More
                                         </a>
                                     </p>
-                                
+
                                     <div class="collapse" id="brazil-descrip">
                                         <div class="card card-body description-box">
                                             <ul class="tour-list">
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Christ the Redeemer & Sugarloaf Mountain</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Iguazu Falls (Thunder of Nature)</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Amazon Rainforest Jungle Trekking</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Pantanal Wildlife Safari</li>
-                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fernando de Noronha (Island Paradise)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Christ the
+                                                    Redeemer & Sugarloaf Mountain</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Iguazu
+                                                    Falls (Thunder of Nature)</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Amazon
+                                                    Rainforest Jungle Trekking</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Pantanal
+                                                    Wildlife Safari</li>
+                                                <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Fernando de
+                                                    Noronha (Island Paradise)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1038,12 +1235,13 @@
                                     </div>
 
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p class="mb-0"><small class="text-muted">From</small> 
-                                        <span class="fw-bold fs-5 text-teal">$3500</span></p>
-                                        
+                                        <p class="mb-0"><small class="text-muted">From</small>
+                                            <span class="fw-bold fs-5 text-teal">$3500</span>
+                                        </p>
+
                                         <button class="btn btn-teal btn-sm px-3 rounded-2 booking">Book Now</button>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
@@ -1128,7 +1326,8 @@
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">We accept all major credit cards, mobile banking, and bank transfers for your convenience.</div>
+                                <div class="accordion-body text-muted">We accept all major credit cards, mobile banking,
+                                    and bank transfers for your convenience.</div>
                             </div>
                         </div>
                         <div class="accordion-item border mb-2 rounded-3">
@@ -1139,7 +1338,8 @@
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">You can reach us 24/7 via email at travelwithtripture@gmail.com or through our live chat</div>
+                                <div class="accordion-body text-muted">You can reach us 24/7 via email at
+                                    travelwithtripture@gmail.com or through our live chat</div>
                             </div>
                         </div>
                     </div>
@@ -1195,52 +1395,57 @@
 
     <!-- Start Footer -->
     <footer class="bg-dark-blue text-white pt-5 pb-3">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-3">
-                        <h5 class="fw-bold text-uppercase mb-4">Tripture</h5>
-                        <p class="small opacity-75">We create unforgettable travel experiences around the world. Your
-                            journey, our passion.</p>
-                        <div class="d-flex gap-3 fs-5 mt-3">
-                            <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i> <i class="bi bi-twitter-x"></i>
-                            <i class="bi bi-youtube"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 ps-lg-5">
-                        <h6 class="fw-bold mb-4">COMPANY</h6>
-                        <ul class="list-unstyled small opacity-75 lh-lg">
-                            <li><a href="./about.html" style="text-decoration: none; color:inherit">About Us</a></li>
-                            <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Team Members</li>
-                            <li>Project Details</li>
-                            <li><a href="mailto:skywayteam@gmail.com" style="text-decoration: none; color:inherit">Contact Developers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <h6 class="fw-bold mb-4">TRAVEL INFO</h6>
-                        <ul class="list-unstyled small opacity-75 lh-lg">
-                            <li>Travel Guides</li>
-                            <li>FAQs</li>
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policy</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h6 class="fw-bold mb-4">PAYMENT METHODS</h6>
-                        <div class="d-flex flex-wrap gap-2 payment-icon">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFYudsqWg9jjosSQLLIVrmywslPWvlXck-w&s" alt="mastercard">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR307JOO-6NJ84smCbefUN4RGVKRDVrh0Dilg&s" alt="visa">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ns1YY_la2zpWjImynS670i2Tktv9zPw4rQ&s" alt="Paypal">
-                            
-                            
-                        </div>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3">
+                    <h5 class="fw-bold text-uppercase mb-4">Tripture</h5>
+                    <p class="small opacity-75">We create unforgettable travel experiences around the world. Your
+                        journey, our passion.</p>
+                    <div class="d-flex gap-3 fs-5 mt-3">
+                        <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i> <i class="bi bi-twitter-x"></i>
+                        <i class="bi bi-youtube"></i>
                     </div>
                 </div>
-                <hr class="my-4 opacity-25">
-                <div class="d-flex flex-wrap justify-content-between small opacity-50">
-                    <p>&copy; <span id="year"></span> Tripture. Developed by Skyway Team(NUCS). All Rights Reserved.</p>
-                    <div class="d-flex gap-3"><span>Terms & Conditions</span> <span>Privacy Policy</span></div>
+                <div class="col-md-3 col-6 ps-lg-5">
+                    <h6 class="fw-bold mb-4">COMPANY</h6>
+                    <ul class="list-unstyled small opacity-75 lh-lg">
+                        <li><a href="./about.html" style="text-decoration: none; color:inherit">About Us</a></li>
+                        <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Team Members
+                        </li>
+                        <li>Project Details</li>
+                        <li><a href="mailto:skywayteam@gmail.com" style="text-decoration: none; color:inherit">Contact
+                                Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h6 class="fw-bold mb-4">TRAVEL INFO</h6>
+                    <ul class="list-unstyled small opacity-75 lh-lg">
+                        <li>Travel Guides</li>
+                        <li>FAQs</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-4">PAYMENT METHODS</h6>
+                    <div class="d-flex flex-wrap gap-2 payment-icon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFYudsqWg9jjosSQLLIVrmywslPWvlXck-w&s"
+                            alt="mastercard">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR307JOO-6NJ84smCbefUN4RGVKRDVrh0Dilg&s"
+                            alt="visa">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ns1YY_la2zpWjImynS670i2Tktv9zPw4rQ&s"
+                            alt="Paypal">
+
+
+                    </div>
                 </div>
             </div>
+            <hr class="my-4 opacity-25">
+            <div class="d-flex flex-wrap justify-content-between small opacity-50">
+                <p>&copy; <span id="year"></span> Tripture. Developed by Skyway Team(NUCS). All Rights Reserved.</p>
+                <div class="d-flex gap-3"><span>Terms & Conditions</span> <span>Privacy Policy</span></div>
+            </div>
+        </div>
     </footer>
     <!-- End Footer  -->
 
@@ -1260,13 +1465,13 @@
         const slider = document.querySelector(".slider");
 
         buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const index = btn.dataset.index;
-            slider.style.transform = `translateX(-${index*100}%)`;
+            btn.addEventListener("click", () => {
+                const index = btn.dataset.index;
+                slider.style.transform = `translateX(-${index * 100}%)`;
 
-            buttons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-        });
+                buttons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            });
         });
     </script>
 
@@ -1277,12 +1482,12 @@
         bookingBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // ဘယ်ခလုတ်နှိပ်နှိပ် booking page ကို ပို့ပေးမယ်
-                window.location.href = 'booking.html'; 
+                window.location.href = 'booking.html';
             });
         });
     </script>
 
-   
+
 
     <!-- copyright footer year -->
     <script>

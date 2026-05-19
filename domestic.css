@@ -3,6 +3,10 @@
   --light-bg: #f8f9fa;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: "Inter", sans-serif;
   background-color: #f0f2f5;
@@ -25,7 +29,6 @@ body {
   background-size: cover;
   background-position: center right; /* ပုံကို ညာဘက်ခြမ်းကို အဓိက ကပ်ထားမယ် */
   height: 80vh;
-  position: relative;
   display: flex;
   align-items: center;
 }
@@ -91,13 +94,13 @@ body {
     align-items: center;
   }
 
-  .hero-content h1{
+  .hero-content h1 {
     font-size: 1.8rem;
   }
-  .hero-content h6{
+  .hero-content h6 {
     font-size: 0.8rem;
   }
-  .hero-content .quick-search-btns{
+  .hero-content .quick-search-btns {
     font-size: 0.7rem;
     padding: 5px 10px;
   }
@@ -109,56 +112,62 @@ body {
 
 /* Color Palette */
 .bg-teal {
-    background-color: #086d71 !important;
+  background-color: #086d71 !important;
 }
 
 .bg-dark-blue {
-    background-color: #051922 !important;
+  background-color: #051922 !important;
 }
 
 /* Accordion Styling */
 .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    color: var(--primary-teal);
-    box-shadow: none;
+  background-color: transparent;
+  color: var(--primary-teal);
+  box-shadow: none;
 }
 
 .accordion-button:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Newsletter Customization */
 .newsletter-box input {
-    height: 50px;
-    border-radius: 8px 0 0 8px;
+  height: 50px;
+  border-radius: 8px 0 0 8px;
 }
 .newsletter-box button {
-    border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 /* Footer Links */
 footer ul li {
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 footer ul li:hover {
-    color: var(--primary-teal);
-    transform: translateX(5px);
+  color: var(--primary-teal);
+  transform: translateX(5px);
 }
 
-.payment-icon img{
-  height:30px;
+.payment-icon img {
+  height: 30px;
   border-radius: 10px;
 }
 
 .map-bg {
-    background: #f8f9fa;
-    position: relative;
-    overflow: hidden;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
+<<<<<<< HEAD
     .border-md-none {
         border: none !important;
     }
-}
+=======   
+  .border-md-none {
+    border: none !important;
+  }
+>>>>>>> d876a0d (update project)
+} */
