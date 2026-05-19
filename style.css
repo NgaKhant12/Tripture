@@ -816,6 +816,10 @@ footer ul li:hover {
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   padding: 0;

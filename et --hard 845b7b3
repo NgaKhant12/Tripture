@@ -1,0 +1,60 @@
+[33m375837f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit (cherry-pick): Update Navbar&Hero-Sec
+[33md876a0d[m HEAD@{1}: checkout: moving from 845b7b318233c8f652934bb1e188944c8cf50c6f to main
+[33m845b7b3[m HEAD@{2}: commit: Update Navbar & Hero-Section
+[33med2982d[m HEAD@{3}: pull origin main --rebase (start): checkout ed2982d37988f8d0cb478cdaa46df1d643aff222
+[33md876a0d[m HEAD@{4}: commit: update project
+[33m2ff235b[m HEAD@{5}: pull origin main --rebase (finish): returning to refs/heads/main
+[33m2ff235b[m HEAD@{6}: pull origin main --rebase (pick): update domestic page
+[33m9141f69[m HEAD@{7}: pull origin main --rebase (start): checkout 9141f6993b566177908eabf1d3b65fe07018bd00
+[33m831b7d1[m HEAD@{8}: commit: update domestic page
+[33m4269368[m HEAD@{9}: commit: Update details of destin page
+[33m6b7b020[m HEAD@{10}: commit: add inter and about pages
+[33mb1d4ac4[m HEAD@{11}: commit: add inter and about pages
+[33m37ae200[m HEAD@{12}: commit: Add Inter and about page
+[33mdff63c8[m HEAD@{13}: commit: Update card Width
+[33m05dad4d[m HEAD@{14}: commit: add destin sec
+[33me3c4136[m HEAD@{15}: commit: update date picker
+[33mf677a72[m HEAD@{16}: commit: update date picker
+[33m35cc470[m HEAD@{17}: commit: update date picker
+[33m3bc42f3[m HEAD@{18}: commit: update date picker
+[33mf14929d[m HEAD@{19}: commit: update previous
+[33m4877765[m HEAD@{20}: commit: update previous
+[33m3d51a8e[m HEAD@{21}: commit: update previous
+[33m7050039[m HEAD@{22}: commit: edit home&nav details
+[33m82a0705[m HEAD@{23}: commit: remove unuse
+[33mff6a23b[m HEAD@{24}: commit: remove unuse
+[33mbaf7a6e[m HEAD@{25}: commit: update home & nav
+[33m722087f[m HEAD@{26}: commit: update home sectio & nav
+[33m06019f3[m HEAD@{27}: commit: add style.css
+[33mdef4d2f[m HEAD@{28}: Branch: renamed refs/heads/master to refs/heads/main
+[33mdef4d2f[m HEAD@{30}: commit (initial): first commit
+[33m375837f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit (cherry-pick): Update Navbar&Hero-Sec
+[33md876a0d[m HEAD@{1}: checkout: moving from 845b7b318233c8f652934bb1e188944c8cf50c6f to main
+[33m845b7b3[m HEAD@{2}: commit: Update Navbar & Hero-Section
+[33med2982d[m HEAD@{3}: pull origin main --rebase (start): checkout ed2982d37988f8d0cb478cdaa46df1d643aff222
+[33md876a0d[m HEAD@{4}: commit: update project
+[33m2ff235b[m HEAD@{5}: pull origin main --rebase (finish): returning to refs/heads/main
+[33m2ff235b[m HEAD@{6}: pull origin main --rebase (pick): update domestic page
+[33m9141f69[m HEAD@{7}: pull origin main --rebase (start): checkout 9141f6993b566177908eabf1d3b65fe07018bd00
+[33m831b7d1[m HEAD@{8}: commit: update domestic page
+[33m4269368[m HEAD@{9}: commit: Update details of destin page
+[33m6b7b020[m HEAD@{10}: commit: add inter and about pages
+[33mb1d4ac4[m HEAD@{11}: commit: add inter and about pages
+[33m37ae200[m HEAD@{12}: commit: Add Inter and about page
+[33mdff63c8[m HEAD@{13}: commit: Update card Width
+[33m05dad4d[m HEAD@{14}: commit: add destin sec
+[33me3c4136[m HEAD@{15}: commit: update date picker
+[33mf677a72[m HEAD@{16}: commit: update date picker
+[33m35cc470[m HEAD@{17}: commit: update date picker
+[33m3bc42f3[m HEAD@{18}: commit: update date picker
+[33mf14929d[m HEAD@{19}: commit: update previous
+[33m4877765[m HEAD@{20}: commit: update previous
+[33m3d51a8e[m HEAD@{21}: commit: update previous
+[33m7050039[m HEAD@{22}: commit: edit home&nav details
+[33m82a0705[m HEAD@{23}: commit: remove unuse
+[33mff6a23b[m HEAD@{24}: commit: remove unuse
+[33mbaf7a6e[m HEAD@{25}: commit: update home & nav
+[33m722087f[m HEAD@{26}: commit: update home sectio & nav
+[33m06019f3[m HEAD@{27}: commit: add style.css
+[33mdef4d2f[m HEAD@{28}: Branch: renamed refs/heads/master to refs/heads/main
+[33mdef4d2f[m HEAD@{30}: commit (initial): first commit
