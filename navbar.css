@@ -35,6 +35,10 @@ body {
   letter-spacing: -0.5px;
   transition: transform 0.3s ease;
 }
+
+.navbar-brand .favilogo-img{
+    filter:brightness(1.5)  drop-shadow(0 0 15px rgba(225, 225, 199, 0.6));
+}
 .navbar-brand:hover {
   transform: scale(1.02);
 }
