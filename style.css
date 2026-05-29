@@ -416,6 +416,121 @@ body {
   opacity: 0.8;
 }
 
+/* ================= international section  =================*/
+
+
+/* Section Styling */
+.international-section {
+    min-height: 100vh;
+    background: radial-gradient(circle, #1a1f29 0%, var(--primary-dark) 100%);
+    padding: 2rem 0;
+}
+
+/* 3D Carousel Container */
+.carousel-container {
+    width: 100%;
+    height: 55vh;
+    perspective: 1000px; /* Enable 3D Space */
+    position: relative;
+}
+
+/* Individual Destination Card */
+.destination-card {
+    position: absolute;
+    width: 14vw;
+    height: 40vh;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.5s ease, 
+                opacity 0.5s ease, 
+                filter 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Overlay for unselected cards */
+.destination-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.5s;
+}
+
+.destination-card.active::after {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Dynamic Text Content */
+.text-content {
+    min-height: 15vh;
+    z-index: 10;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.divider {
+    width: 3.5rem;
+    height: 0.15rem;
+    background-color: #f4f4f4;
+}
+
+.sub-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+}
+
+/* Bottom Navigation Buttons */
+.inter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color:var(--cream);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.inter-btn:hover {
+    background-color: var(--cream);
+    color: var(--primary-dark);
+    border-color: var(--cream);
+}
+
+/* --- Mobile and Tablet Optimization --- */
+@media (max-width: 768px) {
+    .destination-card {
+    
+      width: 40vw;
+      height: 40vh;
+      .main-title {
+          font-size: 1.8rem;
+      }
+    }
+    
+    .sub-title {
+        font-size: 1rem;
+    }
+}
+
 /* ================= GALLERY ================= */
 
 .tour-gallery {
@@ -515,6 +630,7 @@ body {
   line-height: 1.7;
   opacity: 0.8;
 }
+
 
 /* ================= FOOTER ================= */
 
