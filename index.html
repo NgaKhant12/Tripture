@@ -39,7 +39,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- custom css  -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" >
     <link rel="stylesheet" href="navbar.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -313,6 +313,51 @@
         </div>
     </section>
 
+    <!-- International section  -->
+    <section class="international-section d-flex flex-column align-items-center justify-content-center overflow-hidden">
+    
+        <div class="carousel-container d-flex align-items-center justify-content-center" id="carouselContainer">
+            
+            <div class="destination-card" data-title="SWITZERLAND" data-subtitle="Swiss bliss" data-desc="Experience the peak of nature">
+                <img src="./assets/international/switzerland.jpg" alt="Switzerland">
+            </div>
+            
+            <div class="destination-card" data-title="Shinjuku Golden Gai" data-subtitle="JAPAN" data-desc="The land of the rising sun">
+                <img src="./assets/international/japan/Shinjuku Golden Gai.jpg" alt="Japan">
+            </div>
+
+            <div class="destination-card active" data-title="MALDIVES" data-subtitle="MALDIVES" data-desc="Crystal waters, crystal memories">
+                <img src="./assets/international/maldives.jpg" alt="maldives">
+            </div>
+
+            <div class="destination-card" data-title="Universal Studio" data-subtitle="SINGAPORE" data-desc="Lost in a skyline made of dreams">
+                <img src="./assets/international/singapore/Universal Studio.jpg" alt="singapore">
+            </div>
+
+            <div class="destination-card" data-title="PROMENADE DES ANGLAIA" data-subtitle="FRANCE" data-desc="City of romance and lights">
+                <img src="./assets/international/france4.jpg" alt="France">
+            </div>
+        </div>
+
+        <div class="text-content text-center text-white my-4">
+            <h2 class="main-title m-0" id="mainTitle">SWITZERLAND</h2>
+            <div class="divider mx-auto my-2"></div>
+            <h4 class="sub-title" id="subTitle">— Swiss Bliss</h4>
+            <p class="description opacity-75 small" id="description">Experience the peak of nature</p>
+        </div>
+
+        <div class="inter-buttons d-flex gap-4 mt-1">
+            <button class="btn inter-btn d-flex align-items-center justify-content-center" id="prevBtn">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn inter-btn d-flex align-items-center justify-content-center" id="nextBtn">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+    </section>
+
+
     <!-- FEATURES SECTION (Best Travel Experience) -->
     <section class="features-section">
         <div class="container text-center">
@@ -452,21 +497,6 @@
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <!-- Start Footer -->
     <footer class="bg-dark-blue text-white pt-5 pb-3">
@@ -482,23 +512,23 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-6 ps-lg-5">
-                    <h6 class="fw-bold mb-4">COMPANY</h6>
+                    <h6 class="fw-bold mb-4">ABOUT TRIPTURE</h6>
                     <ul class="list-unstyled small opacity-75 lh-lg">
                         <li><a href="./about.html" style="text-decoration: none; color:inherit">About Us</a></li>
-                        <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Team Members
+                        <li><a href="./about.html#our-team" style="text-decoration: none; color:inherit">Our Team
                         </li>
-                        <li>Project Details</li>
+                        <li>Why Choose Us?</li>
                         <li><a href="mailto:skywayteam@gmail.com" style="text-decoration: none; color:inherit">Contact
-                                Developers</a></li>
+                                Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-6">
-                    <h6 class="fw-bold mb-4">TRAVEL INFO</h6>
+                    <h6 class="fw-bold mb-4">QUICK LINKS</h6>
                     <ul class="list-unstyled small opacity-75 lh-lg">
+                        <li><a href="./domestic.html" style="text-decoration: none; color:inherit">Domestic Tours</a></li>
+                        <li><a href="./international.html" style="text-decoration: none; color:inherit">International Tours</a></li>
                         <li>Travel Guides</li>
                         <li>FAQs</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -576,60 +606,15 @@
         AOS.init();
     </script>
 
+    <!-- custom js  -->
+     <script src="./index.js" ></script>
 
-
-    <!-- 1. GSAP Core & ScrollTrigger Plugin (Add BEFORE body closing tag) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- 2. Bootstrap 5 JS Bundle (Includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <!-- 3. Custom GSAP Scroll Animation Script -->
-    <script>
-        // Register the GSAP ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
-
-        // --- Parallax Scroll Animation for Desktop Only (> 991px) ---
-        ScrollTrigger.matchMedia({
-            // Desktop condition
-            "(min-width: 992px)": function () {
-
-                // Create a GSAP Timeline linked to the Scroll
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".hero-section", // The element that triggers the scroll
-                        start: "top top",         // Start when top of hero hits top of viewport
-                        end: "bottom top",       // End when bottom of hero hits top of viewport
-                        scrub: 1,                 // Smooth scrubbing effect linked to scroll distance
-                        markers: false             // Set to true for debugging scroll positions
-                    }
-                });
-
-                // Define the Parallax animations for each card
-
-                // Card 1: Main card moves slowly down
-                tl.to("#card1", { y: 150, ease: "none" }, 0);
-
-                // Card 2: Upper card moves faster down
-                tl.to("#card2", { y: 250, ease: "none" }, 0);
-
-                // Card 3: Lower card moves up (reverse parallax)
-                tl.to("#card3", { y: -120, ease: "none" }, 0);
-
-                // Animate the glowing lines subtly with the scroll
-                tl.to(".glowing-line", { opacity: 0.8, y: 80, ease: "none" }, 0);
-            },
-
-            // Mobile/Tablet condition (kill animation on smaller screens)
-            "(max-width: 991px)": function () {
-                // GSAP matchMedia automatically handles killing ScrollTriggers not within the current media query.
-                // Cards will use their default stacked CSS positioning on mobile.
-            }
-        });
-    </script>
 
 </body>
 
