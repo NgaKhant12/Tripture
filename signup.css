@@ -148,6 +148,14 @@ h2 {
     background-color: white;
     border-radius: 0 100% 100% 0;
 }
+/* Desktop မှာ မိုဘိုင်း Logo ကို ဖျောက်ထားမည် */
+.mobile-logo-wrapper {
+    display: none;
+}
+
+.testimonial {
+    display: block;
+}
 
 .quote-mark {
     font-size: 80px;
@@ -170,8 +178,70 @@ h2 {
     font-size: 14px;
     opacity: 0.8;
 }
-
-/* Responsive */
+/* Responsive Layout Update */
 @media (max-width: 850px) {
-    .info-section { display: none; }
+    body {
+        height: auto;*/
+    }
+
+    .signup-container {
+        flex-direction: column; /* ဘေးတိုက်ကနေ အပေါ်အောက် ပုံစံပြောင်းလိုက်ပါတယ် */
+        height: auto;
+        overflow: visible;
+    }
+
+    /* အပေါ်ဘက်ရောက်သွားမည့် Info Section */
+    .info-section {
+        order: -1;
+        padding: 70px 20px;
+        text-align: center;
+        border-radius: 0 0 40px 40px;
+    }
+
+    /* မိုဘိုင်းမှာ အဆင်မပြေတဲ့ Shapeကုိ ဖျောက်လိုက်ပါတယ် */
+    .info-section::before {
+        display: none !important; 
+        content: none !important;
+    }
+
+
+    /* မိုဘိုင်းဗျူးတွင် Desktop စာသားများကို ဖျောက်ခြင်း */
+    .testimonial {
+        display: none;
+    }
+
+    /* မိုဘိုင်းမှာ Logo ကို ပြန်ဖွင့်ခြင်း */
+    .mobile-logo-wrapper {
+        display: block;
+    }
+
+    /* မိုဘိုင်း Logo နှင့် Glow / Shadow Effect */
+    .mobile-logo {
+        width: 80px;
+        height: auto;
+        margin-bottom: 12px;
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.35)) 
+                drop-shadow(0px 0px 14px rgba(255, 255, 255, 0.85));
+    }
+    .mobile-logo-text {
+        color: #f4f4f4;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Gelasio', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    /* Form ပိုင်းကို အောက်ဘက်မှာ နေရာချခြင်း */
+    .form-section {
+        padding: 50px 20px;
+    }
+    
+    .form-wrapper {
+        max-width: 100%; /* ဖုန်းမျက်နှာပြင်အပြည့် ယူနိုင်အောင်လို့ပါ */
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
 }
