@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking with Tripture</title>
+    <meta name="description" content="Book your dream tour with our agency. Fast and easy booking system">
+    
+    <style>
+
+    @import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+    body{
+        background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .wrapper{display:flex;gap:20px;width:90%;max-width:1000px;margin:auto;}
+    .card{
+        flex:1;
+        background:rgba(255,255,255,0.2);
+        backdrop-filter:blur(12px);
+        padding:20px;
+        border-radius:15px;
+        line-height: 40px;
+    }
+    .card:first-child{
+    flex:1.3;
+    }
+    .card:last-child{
+        flex:1.3;
+        height:fit-content;
+    }
+    input,select{
+        width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;
+    }
+    button{
+        width:100%;padding:12px;background:#0d6efd;color:white;border:none;border-radius:10px;
+    }
+    .total{font-size:22px;font-weight:bold;margin-top:10px;}
+    @media(max-width:768px){.wrapper{flex-direction:column;}
+    .card{
+            max-width:100%;
+        }
+    }
+
+    .swal2-popup{
+        font-family: 'Damion';
+
+        border-radius: 20px;
+    }
+    .swal2-confirm{
+        padding:10px 30px;
+        background-color: #0d6efd;
+    }
+    </style>
+
+    <!-- for pop up action  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+    <div>
+        <div class="wrapper">
+            <form id="bookingForm" class="card">
+         
+                <h2>Booking Form</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+
+                <select id="package" onchange="updateSummary()">
+                    <option value="" disabled selected>Select Package</option>
+                </select>
+                <input type="number" id="people" value="1" min="1" onchange="updateSummary()">
+
+                <input type="date" id="date" onchange="updateSummary()" required>
+
+                <select>
+                    <option selected disabled>Payment Method</option>
+                    <option>VISA</option>
+                    <option>Mastercard</option>
+                    <option>PayPal</option>
+                </select>
+                <!-- <button onclick="confirmBooking()">Confirm Booking</button> -->
+                <button type="submit">Confirm Booking</button>
+
+            
+            </form>
+
+            <div class="card">
+                <h2>Summary</h2>
+                <p id="pkg">Package: -</p>
+                <p id="dateText">Date: -</p>
+                <p id="traveler">Travelers: 1</p>
+                <p class="total" id="total">Total: $0</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const packages=[
+        {name:"Memories pack in Japan (4D/3N)",price:500},
+        {name:"Enchanting China (4D/3N)",price:900},
+        {name:"Enchanting India (4D/3N)",price:1500},
+        {name:"Enchanting South Korea (4D/3N)",price:950},
+        {name:"Enchanting Dubai (4D/3N)",price:800},
+        {name:"Enchanting Maldives (4D/3N)",price:500},
+        {name:"Singapore Quick Escape (2D/1N)",price:500},
+        {name:"Treasures of Thailand (3D/2N)",price:600},
+        {name:"Ultimate Indonesia Expedition (10D/9N)",price:700},
+        {name:"Magic & Heights of Hong Kong (3D/2N)",price:2500},
+        {name:"Vietnam Coast-to-Coast (7D/6N)",price:1100},
+        {name:"Grand Brazil Expedition (8D/7N)",price:4000},
+        {name:"Paris & Île-de-France Classic Tour (6D)",price:1650},
+        {name:"Normandy Coast & Historical France Tour (5D)",price:1290},
+        {name:"Loire Valley Castles Route (5D)",price:1180},
+        {name:"French Riviera Luxury Tour (5D)",price:1450},
+        {name:"French Alps Adventure Escape (4D)",price:1090},
+        {name:"Rome & Central Italy Classic Tour (5D)",price:1690},
+        {name:"North Italy Luxury Tour (5D)",price:1850},
+        {name:"Tuscany & Pisa Cultural Tour (5D)",price:1390},
+        {name:"South Italy Coast & Island Escape (5D)",price:1520},
+        {name:"Madrid & Central Spain Classic Tour (5D)",price:1450},
+        {name:"Barcelona & Catalonia Coast Tour (5D)",price:1590},
+        {name:"Andalusia South Spain Tour (5D)",price:1390},
+        {name:"North Spain Luxury Coast Tour (5D)",price:1520},
+        {name:"Switzerland Grand Tour (7D)",price:2050},
+        {name:"New York & East Coast Classic Tour (5D)",price:1890},
+        {name:"West Coast Dream Tour (5D)",price:2000},
+        {name:"USA National Parks Adventure Tour (5D)",price:1950},
+        {name:"Florida & South East Coast Tour (5D)",price:1750},
+        {name:"Australia Grand Tour (9D)",price:2450},
+        {name:"New Zealand Scenic Loop Tour (9D)",price:2550},
+        {name:"East Canada Classic Tour (7D)",price:1550},
+        {name:"West Canada Nature Tour (7D)",price:1750}
+        ];
+
+        const select=document.getElementById("package");
+        select.innerHTML='<option value="" disabled selected>Select Package</option>';
+        packages.forEach(p=>{
+            select.innerHTML+= `<option value="${p.price}">${p.name}</option>`;
+        });
+        function updateSummary(){
+            let sel=document.getElementById('package');
+            let date=document.getElementById('date').value;
+            let people=document.getElementById('people').value;
+            let price=sel.value;
+            let text=sel.options[sel.selectedIndex].text;
+
+            document.getElementById('pkg').innerText="Package: "+text;
+            document.getElementById('dateText').innerText="Date: "+ (date || "-");
+
+            document.getElementById('traveler').innerText="Travelers: "+people;
+            document.getElementById('total').innerText="Total: $"+(price*people);
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit',function(e){
+            e.preventDefault(); //unable page refresh
+            confirmBooking();
+        })
+
+        // function confirmBooking(){alert("Booking & Payment Successful ");}
+
+        function confirmBooking() {
+        // validation စစ်တဲ့အပိုင်း...
+    
+            Swal.fire({
+            title: 'Success!',
+            text: 'Your Booking has been submitted.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            
+            
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    
+                    if(document.referrer) {
+                        window.location.href = document.referrer; // back to previous page
+                    } else {
+                        window.location.href = "index.html"; // အရင် page မရှိရင် home ကို လွှတ်မယ်
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
