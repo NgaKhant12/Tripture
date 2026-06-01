@@ -956,7 +956,7 @@ body {
 /*  FLUID TYPOGRAPHY  */
 .hero-title {
   font-family: "Playfair Display", serif; /* Elegant Travel Editorial Font */
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 1.5rem;
@@ -971,6 +971,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-style: italic;
   font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 .hero-description {
