@@ -15,22 +15,21 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  /* linear-gradient ကို သုံးပြီး အဖြူရောင်မှ ပုံကြည်ကြည်လေးဖြစ်အောင် ဖန်တီးထားပါတယ် */
   background:
     linear-gradient(
       to right,
       rgba(255, 255, 255, 1) 0%,
-      /* ဘယ်ဘက်အစမှာ အဖြူစစ်စစ် */ rgba(255, 255, 255, 0.9) 30%,
-      /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ rgba(255, 255, 255, 0) 70%
-        /* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
+      rgba(255, 255, 255, 0.9) 30%,
+      rgba(255, 255, 255, 0) 70%
     ),
-    url("/assets/bagan-bg.jpg"); /* စိမ်းစိမ်းစိုစို တောင်တန်းပုံ */
+    url("/assets/bagan-bg.jpg");
 
   background-size: cover;
-  background-position: center right; /* ပုံကို ညာဘက်ခြမ်းကို အဓိက ကပ်ထားမယ် */
+  background-position: center right;
   height: 80vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .text-teal {
@@ -84,7 +83,10 @@ body {
   .hero-section {
     height: auto;
     padding: 40px 0 70px 7px;
-    background: url("/assets/bagan-bg.jpg");
+
+    background:
+      linear-gradient(to top, rgba(11, 11, 11, 1) 0%, rgba(0, 0, 0, 0) 50%),
+      url("/assets/bagan-bg.jpg");
 
     background-size: cover;
     background-position: center right;
@@ -171,3 +173,9 @@ footer ul li:hover {
   }
 >>>>>>> d876a0d (update project)
 } */
+
+@media (max-width: 768px) {
+  .border-md-none {
+    border: none !important;
+  }
+}

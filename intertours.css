@@ -4,14 +4,13 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Eagle_Lake:ital,wght@0,400..700;1,400..700&display=swap");
 
-
 :root {
   --primary: #0b7285;
-  --secondary:#6edbd6;
+  --secondary: #6edbd6;
   --white: #e8fffa; /* background */
-  --text: #12212e;  /* same with primary dark */
+  --text: #12212e; /* same with primary dark */
   --light-bg: #f8fdfd; /* --tripture-light */
-  --tripture-navy: #001f3f;   
+  --tripture-navy: #001f3f;
   --subtext: #6b7280;
 }
 
@@ -33,17 +32,24 @@ body {
   background:
     linear-gradient(
       to right,
-      rgba(255, 255, 255, 1) 0%, /* ဘယ်ဘက်အစမှာ အဖြူစစ်စစ် */ 
-      rgba(255, 255, 255, 0.9) 30%, /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ 
-      rgba(255, 255, 255, 0) 70%/* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
+      rgba(255, 255, 255, 1) 0%,
+      /* ဘယ်ဘက်အစမှာ အဖြူစစ်စစ် */ rgba(255, 255, 255, 0.9) 30%,
+      /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ rgba(255, 255, 255, 0) 70%
+        /* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
     ),
-    url("https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg") no-repeat right top; /* ပင်လယ်ပုံ */
+    url("https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg")
+      no-repeat right top; /* ပင်လယ်ပုံ */
 
-	background-size: cover;
-	height: 80vh;
-	position: relative;
-	display: flex;
-	align-items: center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: end;
 }
 
 .hero-section .text-teal {
@@ -69,13 +75,17 @@ body {
     align-items: center;
   }
 
-  .hero-content h1{
-    font-size: 1.8rem;
-  }
-  .hero-content h6{
-    font-size: 0.8rem;
+  .hero-container {
+    display: flex;
+    align-items: center;
   }
 
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content h6 {
+    font-size: 0.8rem;
+  }
 }
 
 /* Slider  */
@@ -90,68 +100,67 @@ body {
 }
 
 /* Tabs */
-.tapitem{
-    background: #ffffff;
-    padding:12px 30px;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    display: inline-flex;
-    gap:15px;
-    
-    position: relative;
-    margin-top: -35px;
-    margin-bottom: 30px;
-    font-family: 'Poppin';
-    z-index: 10;
+.tapitem {
+  background: #ffffff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  gap: 15px;
 
-    left:50%;
-    transform: translateX(-50%);
+  position: relative;
+  margin-top: -35px;
+  margin-bottom: 30px;
+  font-family: "Poppin";
+  z-index: 10;
+
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tab-btn {
-    border: none;
-    padding: 10px 24px;
-    margin:0 30px;
-    background: radial-gradient(circle,transparent,transparent);
-    border-radius: 30px;
-    border:none;
-    font-size: 20px;
-	max-width: 100%;
-    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  border: none;
+  padding: 10px 24px;
+  margin: 0 30px;
+  background: radial-gradient(circle, transparent, transparent);
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  max-width: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .tab-btn.active,
 .tab-btn:hover:not(.active) {
-    background-image: 
-      linear-gradient(to right, transparent, var(--tripture-navy),transparent),
-      linear-gradient(to right, transparent, var(--tripture-navy),transparent);
-    background-size:100% 2px,100% 2px;
-    background-position: top,bottom;
-    background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to right, transparent, var(--tripture-navy), transparent),
+    linear-gradient(to right, transparent, var(--tripture-navy), transparent);
+  background-size:
+    100% 2px,
+    100% 2px;
+  background-position: top, bottom;
+  background-repeat: no-repeat;
 
-    box-shadow: 
+  box-shadow:
     inset 0 10px 15px -10px rgba(47, 181, 132, 0.2),
     inset 0 -10px 15px -10px rgba(47, 181, 132, 0.2);
-    ;
-
-    transition: all 0.4s ease-in-out;
-    color:var(--tripture-navy)
+  transition: all 0.4s ease-in-out;
+  color: var(--tripture-navy);
 }
 
-@media (max-width:768px) {
-	.tab-btn {
-		padding:8px 15px;
-		margin:0 10px;
-		font-size: 14px;
-	}
+@media (max-width: 768px) {
+  .tab-btn {
+    padding: 8px 15px;
+    margin: 0 10px;
+    font-size: 14px;
+  }
 }
 
-@media (max-width:600px) {
-	.tab-btn {
-		padding:8px 15px;
-		font-size: 10px;
-	}
+@media (max-width: 600px) {
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
 }
 
 /* Card */
@@ -159,7 +168,7 @@ body {
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   margin-bottom: 20px;
   /* border:  */
@@ -168,7 +177,6 @@ body {
 .travel-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(40, 92, 164, 0.544);
-
 }
 
 .img-box {
@@ -181,23 +189,23 @@ body {
   object-fit: cover;
 }
 
-.description-box{
+.description-box {
   background: #f8f9fa;
   border-radius: 12px;
   margin-bottom: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.tour-list{
+.tour-list {
   list-style: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 .tour-list li {
   margin-bottom: 5px;
   font-size: 12px;
-  color:#555;
+  color: #555;
 }
 
 .badge-top {
@@ -209,8 +217,6 @@ body {
   border-radius: 20px;
   font-size: 12px;
 }
-
-
 
 .btn-teal {
   background-color: var(--secondary);
@@ -228,7 +234,6 @@ body {
   background-color: var(--light-bg);
 }
 
-
 /* ANIMATION */
 /* .fade-in {
   opacity: 0;
@@ -243,29 +248,27 @@ body {
 } */
 
 .accordion-button:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Accordion Styling */
 .accordion-button:not(.collapsed) {
-    background-color: transparent;
-    color: var(--secondary);
-    box-shadow: none;
+  background-color: transparent;
+  color: var(--secondary);
+  box-shadow: none;
 }
 
 .accordion-button:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
-
-
 
 /* Newsletter Customization */
 .newsletter-box input {
-    height: 50px;
-    border-radius: 8px 0 0 8px;
+  height: 50px;
+  border-radius: 8px 0 0 8px;
 }
 .newsletter-box button {
-    border-radius: 0 8px 8px 0;
+  border-radius: 0 8px 8px 0;
 }
 
 /* Color Palette */
@@ -274,40 +277,38 @@ body {
 }
 
 .bg-teal {
-    background-color: var(--primary) !important;
+  background-color: var(--primary) !important;
 }
 
 .bg-dark-blue {
-    background-color: var(--tripture-navy) !important;
+  background-color: var(--tripture-navy) !important;
 }
-
-
 
 /* Footer Links */
 footer ul li {
-    cursor: pointer;
-    transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 footer ul li:hover {
-    color: var(--secondary);
-    transform: translateX(5px);
+  color: var(--secondary);
+  transform: translateX(5px);
 }
 
-.payment-icon img{
-  height:30px;
+.payment-icon img {
+  height: 30px;
   border-radius: 10px;
 }
 
 .map-bg {
-    background: transparent;
-    position: relative;
-    overflow: hidden;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
-    .border-md-none {
-        border: none !important;
-    }
+  .border-md-none {
+    border: none !important;
+  }
 }
 
 /* Smooth Scrolling */

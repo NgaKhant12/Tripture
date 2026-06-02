@@ -4,6 +4,7 @@
   --secondary: #6edbd6;
   --white: #e8fffa;
   --cream: #ece7dc;
+  --tripture-navy: #001f3f;
   --glass: rgba(11, 114, 133, 0.15);
 }
 
@@ -268,4 +269,11 @@ body {
     padding: 10px;
     font-size: 1rem;
   }
+}
+
+
+/* footer */
+
+.bg-dark-blue {
+  background-color: var(--tripture-navy) !important;
 }
