@@ -1,869 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap");
 
-:root {
-  --primary: #0b7285;
-  --primary-dark: #12212e;
-  --secondary: #6edbd6;
-  --white: #e8fffa;
-  --cream: #ece7dc;
-  --glass: rgba(255, 255, 255, 0.15);
-  --tripture-navy: #001f3f;
-  --tripture-light: #f8fdfd;
-  --tripture-shadow: 0 15px 40px rgba(0, 31, 63, 0.1);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f8fafc;
-  overflow-x: hidden;
-}
-
-/* ================= COMMON ================= */
-
-.text-teal {
-  color: var(--secondary) !important;
-}
-
-.bg-teal {
-  background-color: var(--primary) !important;
-}
-
-.bg-dark-blue {
-  background-color: var(--tripture-navy) !important;
-}
-
-.accordion-button:focus,
-.accordion-button:not(.collapsed) {
-  box-shadow: none;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: transparent;
-  color: var(--secondary);
-}
-
-/* ================= HERO ================= */
-
-.bg-glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  color: #fff;
-}
-
-.hero-title {
-  animation: fadeInUp 1s ease-out;
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  font-family: "Damion";
-  z-index: 5;
-  color: #f4f4f4;
-}
-
-.hero-title .text-teal {
-  z-index: 5;
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
-  opacity: 0.8;
-  line-height: 1.6;
-  z-index: 5;
-  color: var(--white);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero-section {
-  padding: 160px 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  background:
-    linear-gradient(
-      to right,
-      rgb(0, 0, 0) 0%,
-      rgba(2, 2, 2, 0.9) 30%,
-      rgba(0, 0, 0, 0) 70%
-    ),
-    url("./assets/Domestic/mawlamyine.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* ================= BUTTONS ================= */
-
-.hero-btns-container {
-  display: flex;
-  gap: 15px;
-}
-
-.btn-teal-fill,
-.btn-gateway-light {
-  border-radius: 30px;
-  font-weight: 600;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.btn-teal-fill {
-  background-color: var(--secondary);
-  color: var(--primary-dark);
-  padding: 12px 35px;
-}
-
-.btn-teal-fill:hover {
-  transform: translateY(-2px);
-  color: white;
-  background-color: var(--primary);
-  box-shadow: 0 5px 15px #001f3f;
-}
-
-.btn-gateway-light {
-  background-color: #ffffff;
-  color: var(--tripture-navy);
-  padding: 10px 30px;
-}
-
-.btn-gateway-light:hover {
-  background-color: var(--secondary);
-  color: #ffffff;
-}
-
-/* ================= PHOTO CARDS ================= */
-
-.card-container {
-  position: relative;
-  height: 550px;
-  width: 100%;
-}
-
-.photo-card {
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-  overflow: hidden;
-  position: absolute;
-  transition: transform 0.3s ease;
-  border: 3px solid rgba(29, 156, 150, 0.74);
-}
-
-.photo-card img,
-.gallery-thumb img,
-.main-tour-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-
-
-/* ================= SHAPE DIVIDER ================= */
-
-.custom-shape-divider-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-bottom svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 120px;
-}
-
-.custom-shape-divider-bottom .shape-fill {
-  fill: var(--white);
-}
-
-/* ================= international section  =================*/
-
-/* Section Styling */
-.international-section {
-    min-height: 100vh;
-    background: radial-gradient(circle, #ffffff 0%, #f6f6f6 100%);
-    padding: 2rem 0;
-}
-
-/* 3D Carousel Container */
-.carousel-container {
-    width: 100%;
-    height: 55vh;
-    perspective: 1200px; /* Enable 3D Space */
-    position: relative;
-}
-
-/* Individual Destination Card */
-.destination-card {
-    position: absolute;
-    width: 14vw;
-    height: 40vh;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: transform 0.5s ease, 
-                opacity 0.5s ease, 
-                filter 0.5s ease;
-    cursor: pointer;
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
-    transform-style: preserve-3d;
-}
-
-.destination-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-/* Overlay for unselected cards */
-.destination-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    transition: background 0.5s;
-}
-
-.destination-card.active::after {
-    background: rgba(255, 255, 255, 0);
-}
-
-/* Dynamic Text Content */
-.text-content {
-    min-height: 15vh;
-    z-index: 10;
-}
-
-.main-title {
-  color:#1a1d24;
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-}
-
-.divider {
-    width: 3.5rem;
-    height: 0.15rem;
-    background-color: #1a1d24;
-}
-
-.sub-title {
-    color:#1a1d24;
-    font-size: 1.25rem;
-    letter-spacing: 0.2rem;
-    font-weight: 400;
-}
-.description{
-  color:#555555;
-}
-
-/* Bottom Navigation Buttons */
-.inter-btn {
-    background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color:var(--tripture-navy);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.inter-btn:hover {
-    background-color: var(--tripture-navy);
-    color: var(--cream);
-    border-color: var(--tripture-navy);
-}
-
-/* --- Mobile and Tablet Optimization --- */
-@media (max-width: 768px) {
-    .destination-card {
-    
-      width: 40vw;
-      height: 40vh;
-      .main-title {
-          font-size: 1.8rem;
-      }
-    }
-    
-    .sub-title {
-        font-size: 1rem;
-    }
-}
-
-
-
-/* ================= PATHWAYS SECTION ================= */
-
-.pathways-section {
-  padding: 40px 0 60px;
-  position: relative;
-  background-color: var(--cream);
-}
-
-.section-title,
-.showcase-section-title {
-  font-family: "Poppin";
-}
-
-.section-title {
-  font-weight: 700;
-  font-size: 3rem;
-  margin-bottom: 50px;
-}
-
-.tour-gateway-card {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  height: 450px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  box-shadow: var(--tripture-shadow);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-.tour-gateway-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(5, 64, 64, 0.3);
-}
-
-.tour-gateway-card .gateway-content {
-  background: rgba(0, 31, 63, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.tour-gateway-card h3,
-.tour-gateway-card p {
-  font-family: "Gelasio";
-}
-
-.C h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.tour-gateway-card p {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin-bottom: 25px;
-}
-
-.gateway-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-/* ================= TOUR SHOWCASE ================= */
-
-.tour-showcase-section {
-  padding: 50px 0;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(./assets/bagan-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.showcase-container {
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: var(--tripture-shadow);
-  overflow: hidden;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.showcase-section-title {
-  color: var(--cream);
-  font-weight: 700;
-  font-size: 3rem;
-}
-
-.main-tour-view,
-.main-tour-img-wrapper {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.main-tour-img {
-  height: 600px;
-  transition:
-    transform 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
-}
-
-.main-tour-img.changing {
-  transform: scale(1.1);
-  opacity: 0;
-}
-
-.tour-details-col {
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.tour-header {
-  margin-bottom: 40px;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.tour-header.changing {
-  opacity: 0;
-}
-
-.tour-title {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.tour-price {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.tour-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  opacity: 0.8;
-}
-
-/* ================= GALLERY ================= */
-
-.tour-gallery {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.gallery-thumb {
-  width: 100px;
-  height: 100px;
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.gallery-thumb:hover,
-.gallery-thumb.active {
-  transform: translateY(-5px);
-}
-
-.gallery-thumb.active {
-  border-color: var(--secondary);
-}
-
-.gallery-thumb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 204, 204, 0.1);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-thumb:hover::after,
-.gallery-thumb.active::after {
-  opacity: 1;
-}
-
-/* ================= FEATURES ================= */
-
-.features-section {
-  padding: 100px 0;
-  background-color: #ffffff;
-}
-
-.features-title {
-  font-weight: 700;
-  font-size: 2.8rem;
-  max-width: 700px;
-  margin-inline: auto;
-}
-
-.features-title span {
-  color: var(--secondary);
-}
-
-.feature-item-card {
-  padding: 40px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
-  height: 100%;
-  text-align: center;
-}
-
-.feature-item-card:hover {
-  background-color: #f0fdfa;
-  transform: translateY(-5px);
-}
-
-.feature-icon-wrapper {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgba(0, 204, 204, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 25px;
-  font-size: 2rem;
-}
-
-.feature-item-card h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.feature-item-card p {
-  font-size: 1rem;
-  line-height: 1.7;
-  opacity: 0.8;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer ul li {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-footer ul li:hover {
-  color: var(--secondary);
-  transform: translateX(5px);
-}
-
-.payment-icon img {
-  height: 30px;
-  border-radius: 10px;
-}
-
-.map-bg {
-  background: #f8f9fa;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1199px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
-  #card1 {
-    width: 250px;
-    height: 310px;
-  }
-
-  #card2 {
-    width: 200px;
-    height: 240px;
-    left: 150px;
-  }
-
-  #card3 {
-    width: 180px;
-    height: 210px;
-    left: -80px;
-  }
-}
-
-@media (max-width: 991px) {
-  .navbar-tripture .nav-link {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .hero-section {
-    text-align: center;
-    padding: 100px 0;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-btns-container {
-    justify-content: center;
-  }
-
-  .card-container {
-    height: 450px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .photo-card {
-    position: static !important;
-    left: auto !important;
-    top: auto !important;
-    margin: 0 -30px;
-    border-radius: 15px;
-  }
-
-  #card1 {
-    position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 40px;
-    left: 50px;
-    z-index: 3;
-  }
-
-  #card2 {
-    position: absolute;
-    width: 170px;
-    height: 210px;
-    top: 5px;
-    left: 20px;
-    z-index: 2;
-  }
-
-  #card3 {
-    position: absolute;
-    width: 200px;
-    height: 210px;
-    left: 10px;
-    bottom: 20px;
-    z-index: 10;
-  }
-
-  .glowing-line {
-    display: none;
-  }
-
-  .pathways-section,
-  .tour-showcase-section,
-  .features-section {
-    padding: 70px 0;
-  }
-
-  .tour-gateway-card {
-    height: 350px;
-  }
-
-  .tour-gateway-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .showcase-container {
-    border-radius: 20px;
-  }
-
-  .main-tour-view {
-    height: 400px;
-  }
-
-  .tour-details-col {
-    padding: 40px;
-  }
-
-  .tour-title {
-    font-size: 2.3rem;
-  }
-
-  .tour-price {
-    font-size: 1.3rem;
-  }
-
-  .tour-gallery {
-    margin-top: 40px;
-  }
-
-  .showcase-section-title {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-
-  .features-title {
-    font-size: 2.3rem;
-  }
-
-  .feature-item-card {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 767px) {
-  .features-section {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width: 768px) {
-  .border-md-none {
-    border: none !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    padding: 160px 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.1)),
-      url("./assets/Domestic/mawlamyine.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-  }
-
-  .hero-btns-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn-teal-fill,
-  .btn-outline-white {
-    width: 50%;
-    margin-inline: auto;
-  }
-
-  .card-container {
-    position: relative;
-    width: 100%;
-    border: 2px solid red;
-  }
-
-  .photo-card {
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    position: absolute;
-    transition: transform 0.3s ease;
-    border: 3px solid rgba(29, 156, 150, 0.74);
-  }
-
-  .photo-card:first-child {
-    width: 200px;
-    height: 200px;
-    top: 50px;
-    left: 100px;
-    z-index: 3;
-  }
-  .photo-card:nth-child(2) {
-    width: 180px;
-    height: 180px;
-    top: 0px;
-    left: 70px;
-    z-index: 2;
-  }
-  .photo-card:nth-child(3) {
-    width: 200px;
-    height: 180px;
-    left: 50px;
-    bottom: 20px;
-    z-index: 1;
-  }
-
-  .tour-showcase-section {
-    padding: 50px 0;
-  }
-
-  .main-tour-view {
-    height: 250px;
-  }
-
-  .tour-details-col {
-    padding: 30px;
-  }
-
-  .tour-title {
-    font-size: 1.8rem;
-  }
-
-  .tour-price {
-    font-size: 1.1rem;
-  }
-
-  .tour-gallery {
-    gap: 10px;
-    margin-top: 30px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-
-  .gallery-thumb {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-  }
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 :root {
@@ -1170,7 +306,7 @@ body {
 }
 
 .custom-shape-divider-bottom .shape-fill {
-  fill: #f8fafc;
+  fill: #f9f9f9;
 }
 
 /* RESPONSIVE LAYOUT BREAKPOINTS */
@@ -1275,5 +411,537 @@ body {
   .btn-teal-fill,
   .btn-outline-premium {
     width: 100%;
+  }
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-gateway-light {
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gateway-light {
+  background-color: #ffffff;
+  color: var(--tripture-navy);
+  padding: 10px 30px;
+}
+
+.btn-gateway-light:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+/* ================= PHOTO CARDS ================= */
+
+.gallery-thumb img,
+.main-tour-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= international section  =================*/
+
+/* Section Styling */
+.international-section {
+  min-height: 100vh;
+  background: radial-gradient(circle, #ffffff 0%, #f6f6f6 100%);
+  padding: 2rem 0;
+}
+
+/* 3D Carousel Container */
+.carousel-container {
+  width: 100%;
+  height: 55vh;
+  perspective: 1200px; /* Enable 3D Space */
+  position: relative;
+}
+
+/* Individual Destination Card */
+.destination-card {
+  position: absolute;
+  width: 14vw;
+  height: 40vh;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
+  cursor: pointer;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+  transform-style: preserve-3d;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Overlay for unselected cards */
+.destination-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.5s;
+}
+
+.destination-card.active::after {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Dynamic Text Content */
+.text-content {
+  min-height: 15vh;
+  z-index: 10;
+}
+
+.main-title {
+  color: #1a1d24;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 3.5rem;
+  height: 0.15rem;
+  background-color: #1a1d24;
+}
+
+.sub-title {
+  color: #1a1d24;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+.description {
+  color: #555555;
+}
+
+/* Bottom Navigation Buttons */
+.inter-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--tripture-navy);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.inter-btn:hover {
+  background-color: var(--tripture-navy);
+  color: var(--cream);
+  border-color: var(--tripture-navy);
+}
+
+/* --- Mobile and Tablet Optimization --- */
+@media (max-width: 768px) {
+  .destination-card {
+    width: 40vw;
+    height: 40vh;
+    .main-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+}
+
+/* ================= PATHWAYS SECTION ================= */
+
+.pathways-section {
+  padding: 40px 0 60px;
+  position: relative;
+  background-color: var(--cream);
+}
+
+.section-title,
+.showcase-section-title {
+  font-family: "Poppin";
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.tour-gateway-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  box-shadow: var(--tripture-shadow);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.tour-gateway-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(5, 64, 64, 0.3);
+}
+
+.tour-gateway-card .gateway-content {
+  background: rgba(0, 31, 63, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.tour-gateway-card h3,
+.tour-gateway-card p {
+  font-family: "Gelasio";
+}
+
+.C h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tour-gateway-card p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.gateway-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ================= TOUR SHOWCASE ================= */
+
+.tour-showcase-section {
+  padding: 50px 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./assets/bagan-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.showcase-container {
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: var(--tripture-shadow);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.showcase-section-title {
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.main-tour-view,
+.main-tour-img-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-tour-img {
+  height: 600px;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+.main-tour-img.changing {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.tour-details-col {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-header {
+  margin-bottom: 40px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tour-header.changing {
+  opacity: 0;
+}
+
+.tour-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.tour-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tour-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+/* ================= GALLERY ================= */
+
+.tour-gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb.active {
+  transform: translateY(-5px);
+}
+
+.gallery-thumb.active {
+  border-color: var(--secondary);
+}
+
+.gallery-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 204, 204, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-thumb:hover::after,
+.gallery-thumb.active::after {
+  opacity: 1;
+}
+
+/* ================= FEATURES ================= */
+
+.features-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.features-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.features-title span {
+  color: var(--secondary);
+}
+
+.feature-item-card {
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.feature-item-card:hover {
+  background-color: #f0fdfa;
+  transform: translateY(-5px);
+}
+
+.feature-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 204, 204, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+}
+
+.feature-item-card h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.feature-item-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+footer ul li:hover {
+  color: var(--secondary);
+  transform: translateX(5px);
+}
+
+.payment-icon img {
+  height: 30px;
+  border-radius: 10px;
+}
+
+.map-bg {
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .pathways-section,
+  .tour-showcase-section,
+  .features-section {
+    padding: 70px 0;
+  }
+
+  .tour-gateway-card {
+    height: 350px;
+  }
+
+  .tour-gateway-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .showcase-container {
+    border-radius: 20px;
+  }
+
+  .main-tour-view {
+    height: 400px;
+  }
+
+  .tour-details-col {
+    padding: 40px;
+  }
+
+  .tour-title {
+    font-size: 2.3rem;
+  }
+
+  .tour-price {
+    font-size: 1.3rem;
+  }
+
+  .tour-gallery {
+    margin-top: 40px;
+  }
+
+  .showcase-section-title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .features-title {
+    font-size: 2.3rem;
+  }
+
+  .feature-item-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .features-section {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-md-none {
+    border: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .tour-showcase-section {
+    padding: 50px 0;
+  }
+
+  .main-tour-view {
+    height: 250px;
+  }
+
+  .tour-details-col {
+    padding: 30px;
+  }
+
+  .tour-title {
+    font-size: 1.8rem;
+  }
+
+  .tour-price {
+    font-size: 1.1rem;
+  }
+
+  .tour-gallery {
+    gap: 10px;
+    margin-top: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .gallery-thumb {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
   }
 }
