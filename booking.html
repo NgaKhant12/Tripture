@@ -6,26 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking with Tripture</title>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="https://tripture.vercel.app/assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://tripture.vercel.app/assets/favicon.png?v=2">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <meta name="description" content="Book your dream tour with our agency. Fast and easy booking system">
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial;
+            font-family: 'Poppins', sans-serif;
         }
 
+        :root{
+            --bg-dark: #071924;
+            --primary-cyan: #4ef2d2;
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --input-bg: rgba(0, 0, 0, 0.25);
+        }
+
+        .text-cyan { color: var(--primary-cyan); }
+
+
         body {
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+            background: linear-gradient(to right, rgba(7, 25, 36, 0.85), rgba(7, 25, 36, 0.4)), 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center;
+            background-size: cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #ffffff; /* စာသားများကို အဖြူရောင်ပြောင်းထားသည် */
         }
 
         .wrapper {
@@ -38,8 +52,11 @@
 
         .card {
             flex: 1;
-            background: rgba(255, 255, 255, 0.2);
+            /* အရင် Tripture Form ကဲ့သို့ မှန်သားအရောင် ညှိထားသည် */
+            background: rgba(255, 255, 255, 0.06); 
             backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             padding: 20px;
             border-radius: 15px;
             line-height: 40px;
@@ -54,28 +71,53 @@
             height: fit-content;
         }
 
+
         input,
         select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border-radius: 8px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--glass-border);
+            background-color: var(--input-bg); /* Input နောက်ခံကို အမည်းဖျော့ ပြောင်းထားသည် */
+            color: #ffffff; /* Input အတွင်းမှ စာများကို အဖြူရောင်ပြောင်းထားသည် */
+            outline: none;
+        }
+
+        /* Select option ရွေးသည့်အခါ အဖြူရောင်မဖြစ်နေစေရန် */
+        select option {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+        }
+
+        /* Placeholder အရောင်ကို ညှိထားသည် */
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input:focus, select:focus {
+            border-color: var(--primary-cyan);
+            color: #ffffff;
+            box-shadow: 0 0 0 0.25rem rgba(78, 242, 210, 0.15);
         }
 
         button {
             width: 100%;
             padding: 12px;
-            background: #0d6efd;
-            color: white;
+            /* Button ကို အရင် Tripture Theme အတိုင်း ပြောင်းထားသည် */
+            background: linear-gradient(90deg, var(--primary-cyan), #a3fff0);
+            color: #071924;
+            font-weight: 600;
             border: none;
             border-radius: 10px;
+            cursor: pointer;
         }
 
         .total {
             font-size: 22px;
             font-weight: bold;
             margin-top: 10px;
+            color: var(--primary-cyan); 
         }
 
         @media(max-width:768px) {
@@ -89,18 +131,17 @@
         }
 
         .swal2-popup {
-            font-family: 'Damion';
-
+            font-family: 'Poppins', sans-serif;
             border-radius: 20px;
         }
 
         .swal2-confirm {
             padding: 10px 30px;
-            background-color: #0d6efd;
+            background-color: var(--primary-cyan);
+            color:#071924;
         }
     </style>
 
-    <!-- for pop up action  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
@@ -128,7 +169,6 @@
                     <option>Mastercard</option>
                     <option>PayPal</option>
                 </select>
-                <!-- <button onclick="confirmBooking()">Confirm Booking</button> -->
                 <button type="submit">Confirm Booking</button>
 
 
