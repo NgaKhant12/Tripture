@@ -3,115 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up | Tripture</title>
+    <title>Sign Up with Tripture</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="https://tripture.vercel.app/assets/favicon.png?v=2">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="https://tripture.vercel.app/assets/favicon.png">
-
+    <!-- bootstrap css1 js1  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- custom css  -->
-    <link href="./signup.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./signup.css">
 </head>
 <body>
-    <div class="signup-container" id="signup">
-        <div class="form-section">
-            <div class="form-wrapper">
-                <h2>Create your account</h2>
+
+    <div class="container-fluid login-container d-flex align-items-center justify-content-center">
+        <div class="row w-100 max-container align-items-center" style="min-height: 85vh;">
+            
+            <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-center text-white ps-5 h-100 pe-5">
                 
-                <button class="google-btn">
-                    <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google Logo" style="width: 20px; height: 20px;">
-                    Continue with Google
-                </button>
+                <h1 class="display-4 fw-serif mb-2">Tripture</h1> <p class="lead tagline-text mb-3">Unlock the magic of Travel.</p> <div class="w-100 text-white-50 mb-3"> <p class="mb-0">Discover breathtaking destinations, curated local stays, and tailored itineraries crafted from the heart of Myanmar. Your next unforgettable adventure starts right here.</p>
+                </div>
 
-                <div class="divider">or</div>
-
-                <form id="signupForm">
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="example@email.com" required>
+                <div class="features-list d-flex flex-column gap-3 mb-4"> <div class="d-flex align-items-center gap-3">
+                        <div class="feature-icon" style="width:45px; height:45px; font-size:1.1rem;"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div>
+                            <h6 class="mb-0 text-white">Curated Itineraries</h6>
+                            <small class="text-white-50">Personalized trip plans for you.</small>
+                        </div>
                     </div>
-
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password"  placeholder="*****" required>
-                        <i class="fa-solid fa-eye" id="togglePassword"></i> <!-- for eye -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="feature-icon" style="width:45px; height:45px; font-size:1.1rem;"><i class="fa-solid fa-hotel"></i></div>
+                        <div>
+                            <h6 class="mb-0 text-white">Exclusive Stays</h6>
+                            <small class="text-white-50">Best rates on premium local hotels.</small>
+                        </div>
                     </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="terms" required>
-                        <label for="terms">Remember my account.</label>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="feature-icon" style="width:45px; height:45px; font-size:1.1rem;"><i class="fa-solid fa-headset"></i></div>
+                        <div>
+                            <h6 class="mb-0 text-white">24/7 Support</h6>
+                            <small class="text-white-50">We are here to help anytime, anywhere.</small>
+                        </div>
                     </div>
+                </div>
 
-                    <button type="submit" class="submit-btn">Create account</button>
-                </form>
+                <div class="mt-auto pb-2">
+                    <small class="text-white-50 d-block mb-2">Follow our journey:</small>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-link-icon"><i class="fa-brands fa-instagram fs-5"></i></a>
+                        <a href="#" class="social-link-icon"><i class="fa-brands fa-facebook fs-5"></i></a>
+                        <a href="#" class="social-link-icon"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
 
-                <p class="login-link">Already have an account? <a href="#">Log in</a></p>
             </div>
-        </div>
 
-        <div class="info-section">
-            <div class="mobile-logo-wrapper">
-                <img src="./assets/favicon.png" alt="Tripture Logo" class="mobile-logo">
-                <p class="mobile-logo-text">Tripture</p>
-            </div>
-            <div class="testimonial">
-                <span class="quote-mark">“</span>
-                <p>Unlock the magic of travel with confidence. Our team works tirelessly to curate safe, exciting, and authentic local experiences for every traveler.</p>
-                <div class="author">
-                    <strong>Tripture Team</strong><br>
-                    <span>Peaceful Travel with Us</span>
+            <div class="col-lg-6 col-100 d-flex justify-content-center align-items-center">
+                <div class="glass-card p-4 p-md-4 w-100" style="max-width: 380px;">
+                    
+                    <div class="text-center d-lg-none mb-3">
+                        <h1 class="fw-serif text-white mb-1">Tripture</h1>
+                        <p class="text-white-50 small">Unlock the magic of Travel</p>
+                    </div>
+
+                    <div class="switch-box mb-3 mx-auto" id="switchBox"> <div class="switch-slider"></div>
+                        <button class="switch-btn active" id="btnShowLogin">Log In</button>
+                        <button class="switch-btn" id="btnShowSignup">Sign Up</button>
+                    </div>
+
+                    <div class="form-container relative-container">
+                        
+                        <div class="form-section active" id="loginSection">
+                            <h3 class="text-white text-center mb-1">Welcome back !</h3>
+                            <p class="text-center text-white-50 small mb-3">Log in to continue your adventure</p>
+
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50 small mb-1">Email Address</label>
+                                    <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50 small mb-1">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" class="form-control password-input" id="loginPassword" placeholder="Enter your password" required minlength="6">
+                                        <i class="fa-regular fa-eye-slash toggle-password password-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="text-end mb-3">
+                                    <a href="#" class="forgot-link small text-cyan">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-action w-100 mb-3 py-2">
+                                    Log In <i class="fa-solid fa-arrow-right ms-2"></i>
+                                </button>
+                            </form>
+
+                            <div class="text-center text-white-50 small mb-2">or continue with</div>
+                            <div class="d-flex justify-content-center gap-3 mb-3">
+                                <button class="btn btn-social" style="width:40px; height:40px;"><i class="fa-brands fa-google"></i></button>
+                                <button class="btn btn-social" style="width:40px; height:40px;"><i class="fa-brands fa-apple"></i></button>
+                                <button class="btn btn-social" style="width:40px; height:40px;"><i class="fa-brands fa-facebook-f"></i></button>
+                            </div>
+
+                            <div class="text-center text-white-50 small">
+                                New here? <a href="#" class="switch-link text-cyan" id="linkToSignUp">Sign up for an account</a>
+                            </div>
+                        </div>
+
+                        <div class="form-section" id="signupSection">
+                            <h3 class="text-white text-center mb-1">Create Account</h3>
+                            <p class="text-center text-white-50 small mb-3">Join Tripture to explore the world</p>
+
+                            <form id="signUpForm">
+                                <div class="mb-2">
+                                    <label class="form-label text-white-50 small mb-1">Full Name</label>
+                                    <input type="text" class="form-control" id="signUpName" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label text-white-50 small mb-1">Email Address</label>
+                                    <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-white-50 small mb-1">Password</label>
+                                    <div class="password-wrapper">
+                                        <input type="password" class="form-control password-input" id="signUpPassword" placeholder="Create password" required minlength="6">
+                                        <i class="fa-regular fa-eye-slash toggle-password password-icon"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-3 ms-1">
+                                    <input class="form-check-input custom-checkbox" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label text-white-50 small" for="termsCheck">
+                                        I agree to the <a href="#" class="text-cyan text-decoration-none">Terms</a> & <a href="#" class="text-cyan text-decoration-none">Privacy</a>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary-action w-100 mb-3 mt-1 py-2">
+                                    Register Now <i class="fa-solid fa-user-plus ms-2"></i>
+                                </button>
+                            </form>
+
+                            <div class="text-center text-white-50 small">
+                                Already have an account? <a href="#" class="switch-link text-cyan" id="linkToLogin">Log In here</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        
-        const form = document.getElementById('signupForm');
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            //Sliding Toggle & Form Switch Logic
+            const switchBox = document.getElementById('switchBox');
+            
+            // Buttons
+            const btnShowLogin = document.getElementById('btnShowLogin');
+            const btnShowSignup = document.getElementById('btnShowSignup');
+            const linkToSignUp = document.getElementById('linkToSignUp'); // link inside form
+            const linkToLogin = document.getElementById('linkToLogin');   // link inside form
 
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                // 1. Stop the page from refreshing
-                e.preventDefault(); 
+            // Form Sections
+            const loginSection = document.getElementById('loginSection');
+            const signupSection = document.getElementById('signupSection');
 
-                // 2. Get the values from the inputs
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const terms = document.getElementById('terms').checked;
+            // Sign Up ဖက်သို့ ရွှေ့ရန် function
+            const switchToSignup = (e) => {
+                e.preventDefault();
+                // Move the slider bubble
+                switchBox.classList.add('signup-active');
+                btnShowLogin.classList.remove('active');
+                btnShowSignup.classList.add('active');
 
-                // 3. Simple logic to check if fields are filled
-                if (email && password) {
-                    console.log("Form Submitted!");
-                    // alert("Welcome to Tripture! Account created for: " + email);
+                // Change the forms (Fade effect)
+                loginSection.classList.remove('active');
+                signupSection.classList.add('active');
+            };
+
+            // Log In ဖက်သို့ ပြန်ရွှေ့ရန် function
+            const switchToLogin = (e) => {
+                e.preventDefault();
+                // Move the slider bubble back
+                switchBox.classList.remove('signup-active');
+                btnShowSignup.classList.remove('active');
+                btnShowLogin.classList.add('active');
+
+                // Change the forms (Fade effect)
+                signupSection.classList.remove('active');
+                loginSection.classList.add('active');
+            };
+
+            // Event Listeners ချိတ်ဆက်ခြင်း
+            btnShowSignup.addEventListener('click', switchToSignup);
+            linkToSignUp.addEventListener('click', switchToSignup);
+
+            btnShowLogin.addEventListener('click', switchToLogin);
+            linkToLogin.addEventListener('click', switchToLogin);
+
+
+            // Password (Toggle View)
+            const passwordToggles = document.querySelectorAll('.toggle-password');
+            passwordToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const input = this.parentElement.querySelector('input');
+                    const icon = this;
                     
-                    // Optional: Redirect to home page after success
-                    window.location.href = "index.html";
-                } else {
-                    alert("Please fill in all fields.");
+                    if (input.type === 'password') {
+                        input.type = 'text'; 
+                        icon.classList.replace('fa-eye-slash', 'fa-eye'); 
+                    } else {
+                        input.type = 'password'; 
+                        icon.classList.replace('fa-eye', 'fa-eye-slash');
+                    }
+                });
+            });
+
+
+            //Form Submit (Valid ဖြစ်ပါက home page သို့ သွားမည်)
+            const loginForm = document.getElementById('loginForm');
+            const signUpForm = document.getElementById('signUpForm');
+
+            loginForm.addEventListener('submit', function(event) {
+                if (this.checkValidity()) {
+                    event.preventDefault(); 
+                    window.location.href = "home.html"; // home.html
                 }
             });
-        } else {
-            console.error("Could not find the signupForm ID. Check your HTML!");
-        }
-    });
-    </script>
 
-    <!-- for eye transtion  -->
-    <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const passwordField = document.querySelector('#password');
-
-        togglePassword.addEventListener('click', function () {
-            //1. Type ကို password နဲ့ text အပြန်အလှန် ပြောင်းခြင်း
-            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordField.setAttribute('type', type);
-
-            //2. Icon ကို fa-eye ကနေ fa-eye-slash ကို အပြန်အလှန် ပြောင်းခြင်း
-            this.classList.toggle('fa-eye');
-            this.classList.toggle('fa-eye-slash');
+            signUpForm.addEventListener('submit', function(event) {
+                if (this.checkValidity()) {
+                    event.preventDefault(); 
+                    window.location.href = "home.html"; // home.html
+                }
+            });
         });
-     </script>
+    </script>
 </body>
 </html>

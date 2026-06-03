@@ -1,247 +1,249 @@
-/*sign up*/
-@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --bg-dark: #071924;
+    --primary-cyan: #4ef2d2;
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --input-bg: rgba(0, 0, 0, 0.25);
 }
 
 body {
-    background-color: #ffffff;
-    height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.signup-container {
+.fw-serif { font-family: 'Playfair Display', serif; }
+.text-cyan { color: var(--primary-cyan); }
+
+/* Background */
+.login-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(7, 25, 36, 0.85), rgba(7, 25, 36, 0.4)), 
+                url('./assets/Domestic/mawlamyine.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+
+    /* https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=1920 */
+}
+
+.max-container { max-width: 1200px; }
+
+.tagline-text {
+    color: var(--primary-cyan);
+    letter-spacing: 1px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Sliding Toggle Switch --- */
+.switch-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
     display: flex;
-    height: 100%;
-    overflow: hidden;
+    width: 240px; /* Width of the switch */
+    padding: 4px;
 }
 
-/* Left Section */
+.switch-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 0;
+    z-index: 2; /* To stay above the slider */
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.switch-btn.active {
+    color: #04121a;
+    font-weight: 600;
+}
+
+.switch-slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: linear-gradient(135deg, #2bcbb0, var(--primary-cyan));
+    border-radius: 25px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+/* Move the slider to the right when Sign Up is active */
+.switch-box.signup-active .switch-slider {
+    transform: translateX(100%);
+}
+
+/* --- Form Transition Animations --- */
+.relative-container {
+    position: relative;
+}
+
 .form-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    
-}
-
-.form-wrapper {
-    width: 100%;
-    max-width: 400px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 40px;
-    color: #333;
-    text-align: center;
-    font-family: 'Gelasio';
-}
-
-.google-btn {
-    width: 100%;
-    padding: 12px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.divider {
-    text-align: center;
-    margin: 20px 0;
-    color: #888;
-    position: relative;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #666;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    /* border: 1px solid #009cd5; */
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-/* eye position  */
-#togglePassword {
     position: absolute;
-    right:15px;
-    top:55%;
-    cursor: pointer;
-    color:#666;
-}
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    margin: 20px 0;
-    color: #666;
-}
-
-.submit-btn {
     width: 100%;
-    padding: 14px;
-    background-color: #0065b3; /* Orange from sample */
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.submit-btn:hover {
-    background-color: #dde3e9; /* Orange from sample */
-    color: #0065b3;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-
-}
-
-.login-link {
-    margin-top: 20px;
-    font-size: 14px;
-    text-align: center;
-}
-
-/* Right Section */
-.info-section {
-    flex: 1;
-    background-color: #009cd5; /* Purple background */
-    color: rgb(10, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px;
-    position: relative;
-
-}
-
-/* Shape effect from image */
-.info-section::before {
-    content: "";
-    position: absolute;
-    left: -50px;
     top: 0;
-    height: 100%;
-    width: 100px;
-    background-color: white;
-    border-radius: 0 100% 100% 0;
-}
-/* Desktop မှာ မိုဘိုင်း Logo ကို ဖျောက်ထားမည် */
-.mobile-logo-wrapper {
-    display: none;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
 
-.testimonial {
-    display: block;
+.form-section.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.quote-mark {
-    font-size: 80px;
-    line-height: 0;
-    display: block;
-    margin-bottom: 30px;
-    opacity: 0.5;
+/* Input Fields */
+.form-control {
+    background-color: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    color: #ffffff;
+    padding: 10px 12px;
+
+    border-radius: 12px;
 }
 
-.testimonial p {
-    font-size: 22px;
-    line-height: 2;
-    margin-bottom: 20px;
-    font-weight: 500;
-    font-family: 'Gelasio';
-
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-color: var(--primary-cyan);
+    color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgba(78, 242, 210, 0.15);
 }
 
-.author span {
-    font-size: 14px;
-    opacity: 0.8;
+.form-control::placeholder { color: rgba(255, 255, 255, 0.3); }
+
+
+
+.password-wrapper {
+    position: relative;
+    width:100%;
 }
-/* Responsive Layout Update */
-@media (max-width: 850px) {
-    body {
-        height: auto;*/
-    }
 
-    .signup-container {
-        flex-direction: column; /* ဘေးတိုက်ကနေ အပေါ်အောက် ပုံစံပြောင်းလိုက်ပါတယ် */
-        height: auto;
-        overflow: visible;
-    }
+.password-input{
+    padding-right: 40px !important;
+}
 
-    /* အပေါ်ဘက်ရောက်သွားမည့် Info Section */
-    .info-section {
-        order: -1;
-        padding: 70px 20px;
-        text-align: center;
-        border-radius: 0 0 40px 40px;
-    }
+.password-icon {
+    position: absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 10;
+}
 
-    /* မိုဘိုင်းမှာ အဆင်မပြေတဲ့ Shapeကုိ ဖျောက်လိုက်ပါတယ် */
-    .info-section::before {
-        display: none !important; 
-        content: none !important;
-    }
+.password-icon:hover{
+    color:var(--primary-cyan)
+}
 
+#termsCheck{
+    background-color: transparent; border-color: rgba(255,255,255,0.3);
+}
 
-    /* မိုဘိုင်းဗျူးတွင် Desktop စာသားများကို ဖျောက်ခြင်း */
-    .testimonial {
-        display: none;
-    }
+/* Buttons & Links */
+.btn-primary-action {
+    background: linear-gradient(90deg, var(--primary-cyan), #a3fff0);
+    border: none;
+    color: #071924;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+}
 
-    /* မိုဘိုင်းမှာ Logo ကို ပြန်ဖွင့်ခြင်း */
-    .mobile-logo-wrapper {
-        display: block;
-    }
+.btn-social {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--primary-cyan);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    /* မိုဘိုင်း Logo နှင့် Glow / Shadow Effect */
-    .mobile-logo {
-        width: 100px;
-        height: auto;
-        margin-bottom: 12px;
-        filter: brightness(2) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.85)) 
-                drop-shadow(0px 0px 14px rgba(0, 220, 220, 0.85));
-    }
-    .mobile-logo-text {
-        color: #f4f4f4;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: 'Gelasio', sans-serif;
-        letter-spacing: 0.5px;
-    }
+.forgot-link, .switch-link { text-decoration: none; }
+.forgot-link:hover, .switch-link:hover { text-decoration: underline; }
 
-    /* Form ပိုင်းကို အောက်ဘက်မှာ နေရာချခြင်း */
-    .form-section {
-        padding: 50px 20px;
+/* Mobile */
+@media (max-width: 991.98px) {
+    .login-container {
+        background: linear-gradient(180deg, rgba(7, 25, 36, 0.9) 0%, rgba(7, 25, 36, 0.7) 100%), 
+                    url('./assets/Domestic/mawlamyine.jpg') no-repeat center center;
+        background-size: cover;
     }
-    
-    .form-wrapper {
-        max-width: 100%; /* ဖုန်းမျက်နှာပြင်အပြည့် ယူနိုင်အောင်လို့ပါ */
-    }
+}
 
-    h2 {
-        font-size: 22px;
-        margin-bottom: 25px;
-    }
+/* --- Fix for Laptops with smaller screen heights --- */
+/* @media (max-height: 850px) { */
+    /* ဘယ်ဘက်ခြမ်းကို နည်းနည်းကျုံ့မည် */
+    /* .display-4 { font-size: 2.5rem; } 
+    .mb-5 { margin-bottom: 1.5rem !important; } 
+    .mb-4 { margin-bottom: 1rem !important; }
+    .gap-4 { gap: 1rem !important; } 
+    .feature-icon { width: 40px; height: 40px; font-size: 1rem; }
+     */
+    /* ညာဘက် Form Card ကို နည်းနည်းကျုံ့မည် */
+    /* .glass-card { padding: 1.5rem !important; } 
+    h3 { font-size: 1.5rem; }
+    .form-control { padding: 8px 12px; }
+    .btn-primary-action { padding: 10px; }
+     */
+    /* Login နဲ့ Signup ခလုတ် အကွာအဝေးကို လျှော့မည် */
+    /* .switch-box { margin-bottom: 1rem !important; }
+} */
+
+/* --- New Features List & Icons (Left Side) --- */
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-cyan);
+    font-size: 1.3rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.social-link-icon {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-link-icon:hover {
+    color: var(--primary-cyan);
+    transform: translateY(-3px);
 }
