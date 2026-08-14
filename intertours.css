@@ -37,7 +37,7 @@ body {
       /* ၃၀% အထိ အဖြူရောင် လွှမ်းထားမယ် */ rgba(255, 255, 255, 0) 70%
         /* ၇၀% ရောက်ရင် အဖြူရောင် ပျောက်သွားပြီး ပုံပဲကျန်မယ် */
     ),
-    url("https://www.visitgreece.gr/images/1743x752/jpg/files/merakos_05_santorini-oia_1743x752.jpg")
+    url("./assets/Santorini.jpg")
       no-repeat right top; /* ပင်လယ်ပုံ */
 
   background-size: cover;
